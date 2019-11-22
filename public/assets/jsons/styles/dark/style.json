@@ -1,0 +1,124 @@
+{
+  "version": 8,
+  "name": "Dark Style",
+  "id": "mads-dark-style",
+  "owner": "aydinghane",
+  "created": "2019-06-28T14:49:52.651Z",
+  "modified": "2019-06-28T14:49:52.651Z",
+  "draft": false,
+  "visibility": "public",
+  "metadata": {
+    "mapbox:autocomposite": true,
+    "mapbox:type": "default",
+    "mapbox:origin": "mads-dark-style",
+    "mapbox:groups": {}
+  },
+  "sources": {
+    "country-polygons": {
+      "type": "geojson",
+      "data": "/assets/jsons/country-polygons.json"
+    },
+    "country-points": {
+      "type": "geojson",
+      "data": "/assets/jsons/country-points.json"
+    }
+  },
+  "sprite": "",
+  "glyphs": "/assets/glyphs/{fontstack}/{range}.pbf",
+  "layers": [{
+    "id": "background",
+    "type": "background",
+    "paint": {
+      "background-color": ["interpolate", ["exponential", 1],
+        ["zoom"], 5, "#101518", 10, "#101518"
+      ]
+    }
+  }, {
+    "id": "country-fills",
+    "source": "country-polygons",
+    "type": "fill",
+    "layout": {},
+    "paint": {
+      "fill-color": "#263238",
+      "fill-opacity": 1
+    }
+  }, {
+    "id": "country-lines",
+    "source": "country-polygons",
+    "type": "line",
+    "layout": {},
+    "paint": {
+      "line-color": "#E1F5FE",
+      "line-opacity": 0.3
+    }
+  }, {
+    "id": "country-symbols",
+    "source": "country-points",
+    "type": "symbol",
+    "layout": {
+      "text-max-width": 4,
+      "text-field": ["step", ["zoom"], "",
+        2,
+        [
+          "case",
+          [">=", ["to-number", ["get", "area"]], 5000000],
+          ["get", "name"],
+          ""
+        ],
+        3,
+        [
+          "case",
+          [">=", ["to-number", ["get", "area"]], 800000],
+          ["get", "name"],
+          ""
+        ],
+        4,
+        [
+          "case",
+          [">=", ["to-number", ["get", "area"]], 300000],
+          ["get", "name"],
+          ""
+        ],
+        5,
+        [
+          "case",
+          [">=", ["to-number", ["get", "area"]], 100000],
+          ["get", "name"],
+          ""
+        ],
+        6,
+        [
+          "case",
+          [">=", ["to-number", ["get", "area"]], 40000],
+          ["get", "name"],
+          ""
+        ],
+        7,
+        [
+          "case",
+          [">=", ["to-number", ["get", "area"]], 10000],
+          ["get", "name"],
+          ""
+        ]
+      ],
+      "text-font": ["Roboto Light"],
+      "text-size": ["interpolate", ["exponential", 1],
+        ["zoom"],
+        2, ["*", 20, ["/", ["min", 15000000, ["get", "area"]], 15000000]],
+        3, ["*", 20, ["/", ["min", 2000000, ["get", "area"]], 2000000]],
+        4, ["*", 25, ["/", ["min", 800000, ["get", "area"]], 800000]],
+        5, ["*", 30, ["/", ["min", 400000, ["get", "area"]], 400000]],
+        6, ["*", 35, ["/", ["min", 200000, ["get", "area"]], 200000]],
+        7, ["*", 40, ["/", ["min", 50000, ["get", "area"]], 50000]]
+      ]
+    },
+    "paint": {
+      "text-opacity": ["interpolate", ["exponential", 1],
+        ["zoom"],
+        2, 1.0,
+        6, 0.5
+      ],
+      "text-color": "#E1F5FE"
+    }
+  }]
+}

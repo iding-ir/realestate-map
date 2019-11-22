@@ -1,0 +1,3059 @@
+{
+  "features": [{
+      "geometry": {
+        "coordinates": [
+          66.00871032913685,
+          33.836028997298435
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 652230,
+        "name": "Afghanistan"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.537085175413573,
+          -12.292683463049904
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 1246700,
+        "name": "Angola"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.05519038465865,
+          41.13918487093374
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 28748,
+        "name": "Albania"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.97744708777552,
+          60.22274469669068
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 1580,
+        "name": "Åland Islands"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          1.5566140966502922,
+          42.54110816245289
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 468,
+        "name": "Andorra"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          54.51147938432032,
+          23.60195958493739
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 83600,
+        "name": "United Arab Emirates"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -65.17906072976822,
+          -35.387509762539594
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 2780400,
+        "name": "Argentina"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          44.936879845107335,
+          40.28541972234642
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 29743,
+        "name": "Armenia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -170.73560000000003,
+          -14.313699999999999
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 199,
+        "name": "American Samoa"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.946531240198613,
+          -80.51130182632994
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 14000000,
+        "name": "Antarctica"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          69.31251555675213,
+          -49.27771333126436
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 7747,
+        "name": "French Southern and Antarctic Lands"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -61.788204152574394,
+          17.262051097539402
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 442,
+        "name": "Antigua and Barbuda"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          134.4895343865007,
+          -25.733972368854356
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 7692024,
+        "name": "Australia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          14.13068553810334,
+          47.587728266525225
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 83871,
+        "name": "Austria"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          47.54331441855636,
+          40.29172734840822
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 86600,
+        "name": "Azerbaijan"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          29.873978666095898,
+          -3.358679806278834
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 27834,
+        "name": "Burundi"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          4.639703338104749,
+          50.639388815256595
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 30528,
+        "name": "Belgium"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          2.3285642439014254,
+          9.642664547878448
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 112622,
+        "name": "Benin"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -1.756157729990068,
+          12.268155213770779
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 272967,
+        "name": "Burkina Faso"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          90.13595679129359,
+          24.40542813163192
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 147570,
+        "name": "Bangladesh"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          25.21843172787199,
+          42.769189188000425
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 110879,
+        "name": "Bulgaria"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          50.544028369987295,
+          26.02695793812406
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 765,
+        "name": "Bahrain"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -76.68328713906389,
+          24.20661652470978
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "The Bahamas"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.77456217773678,
+          44.17076835145358
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 51209,
+        "name": "Bosnia and Herzegovina"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          28.031083622347225,
+          53.5323613741662
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 207600,
+        "name": "Belarus"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -88.70527935220773,
+          17.198983834601158
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 22966,
+        "name": "Belize"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -64.68531777243997,
+          -16.705802668193943
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 1098581,
+        "name": "Bolivia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -53.092067190726155,
+          -10.779227843785959
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 8515767,
+        "name": "Brazil"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -59.56328167897637,
+          13.18019047642093
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 430,
+        "name": "Barbados"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          114.7268888347029,
+          4.513741562605436
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 5765,
+        "name": "Brunei"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          90.40200387166287,
+          27.42448562348632
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 38394,
+        "name": "Bhutan"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          23.797752404043806,
+          -22.185667503545677
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 582000,
+        "name": "Botswana"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.464952654521397,
+          6.566266462218329
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 622984,
+        "name": "Central African Republic"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -110.2299407827809,
+          60.42331280773125
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 9984670,
+        "name": "Canada"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          8.220365731668132,
+          46.7993798477778
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 41284,
+        "name": "Switzerland"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -72.34242072355508,
+          -37.8243610382326
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 756102,
+        "name": "Chile"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          101.83141012987424,
+          35.56073432399286
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 9706961,
+        "name": "China"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -5.567432256908278,
+          7.62507585849708
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 322463,
+        "name": "Ivory Coast"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          12.535138470760761,
+          4.5026298318372615
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 475442,
+        "name": "Cameroon"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          33.25341857490945,
+          35.10578872954215
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "Cyprus No Mans Area"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          23.644991548524438,
+          -2.87939434870495
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 2344858,
+        "name": "DR Congo"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          16.017985739051118,
+          -0.1605854697952342
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 342000,
+        "name": "Republic of the Congo"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -73.08198867691472,
+          3.9106508833376874
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 1141748,
+        "name": "Colombia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          43.64622965650627,
+          -11.858216329825
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 1862,
+        "name": "Comoros"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -23.987940603767395,
+          15.92331039993546
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 4033,
+        "name": "Cape Verde"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -84.19558287017797,
+          9.976303059960602
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 51100,
+        "name": "Costa Rica"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -79.02222010445469,
+          21.619215079800185
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 109884,
+        "name": "Cuba"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -68.96326713169414,
+          12.180954874304364
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 444,
+        "name": "Curaçao"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -81.23364704505256,
+          19.320263749276226
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 264,
+        "name": "Cayman Islands"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          33.5947824212285,
+          35.27707663829549
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "Northern Cyprus"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          32.97304894926673,
+          34.913762005868726
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 9251,
+        "name": "Cyprus"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          15.313500294514906,
+          49.73415293054196
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 78865,
+        "name": "Czechia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          10.3832373133128,
+          51.10213760847994
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 357114,
+        "name": "Germany"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          42.56706130004832,
+          11.752819796546115
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 23200,
+        "name": "Djibouti"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -61.35859746736488,
+          15.43921237564427
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 751,
+        "name": "Dominica"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          10.02829827320176,
+          55.99070007000737
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 43094,
+        "name": "Denmark"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -70.50259955486565,
+          18.901064746786464
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 48671,
+        "name": "Dominican Republic"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          2.6529986647482455,
+          28.148927622439313
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 2381741,
+        "name": "Algeria"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -78.74976086248006,
+          -1.4277957028741064
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 276841,
+        "name": "Ecuador"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          29.85946162380533,
+          26.491194262944237
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 1002450,
+        "name": "Egypt"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          38.850116558926814,
+          15.358926548188697
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 117600,
+        "name": "Eritrea"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          33.80423919723835,
+          35.01227448986589
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "Dhekelia Sovereign Base Area"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -3.6519745683476925,
+          40.23614363030436
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 505992,
+        "name": "Spain"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          25.556653172964367,
+          58.66958062827474
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 45227,
+        "name": "Estonia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          39.60057475377671,
+          8.623199413033811
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 1104300,
+        "name": "Ethiopia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          26.286811118844618,
+          62.50316513301343
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 338424,
+        "name": "Finland"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          171.74712671540266,
+          -17.424753165189415
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 18272,
+        "name": "Fiji"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -59.333834638280955,
+          -51.728064842267536
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 12173,
+        "name": "Falkland Islands"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          2.742327121257395,
+          46.66776582918954
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 551695,
+        "name": "France"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -6.940854551537886,
+          62.091401597682726
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 1393,
+        "name": "Faroe Islands"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          158.2349000180039,
+          6.880414407775075
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 702,
+        "name": "Micronesia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          11.78386966974727,
+          -0.59022768533715
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 267668,
+        "name": "Gabon"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -2.0010049524544854,
+          52.73412209229416
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 242900,
+        "name": "United Kingdom"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          43.502788263984186,
+          42.170490185124066
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 69700,
+        "name": "Georgia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -1.2159382965520984,
+          7.952584977804169
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 238533,
+        "name": "Ghana"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -10.949486406148527,
+          10.437028801543896
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 245857,
+        "name": "Guinea"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -15.422852419815639,
+          13.447558147806532
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 10689,
+        "name": "Gambia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -14.96706745692223,
+          12.034375152510773
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "Guinea Bissau"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          10.336440253036951,
+          1.7033072158734281
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 28051,
+        "name": "Equatorial Guinea"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.702241223854957,
+          39.50487039685576
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 131990,
+        "name": "Greece"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -61.6742472688779,
+          12.116233152850523
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 344,
+        "name": "Grenada"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -41.36504933847149,
+          74.71854008578937
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 2166086,
+        "name": "Greenland"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -90.3617197666772,
+          15.694735169793846
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 108889,
+        "name": "Guatemala"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          144.77797347369838,
+          13.45027318378371
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 549,
+        "name": "Guam"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -58.980364867095446,
+          4.7952361613774075
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 214969,
+        "name": "Guyana"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          114.12551091379878,
+          22.40698574779801
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "Hong Kong S.A.R."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          73.52856728566924,
+          -53.097824612198615
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 412,
+        "name": "Heard Island and McDonald Islands"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -86.6239648417923,
+          14.815871279690068
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 112492,
+        "name": "Honduras"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          16.750382071244717,
+          45.6194839095809
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 56594,
+        "name": "Croatia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -72.68266171164326,
+          18.934019431537113
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 27750,
+        "name": "Haiti"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.399312999760674,
+          47.16191033601349
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 93028,
+        "name": "Hungary"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          113.24691048332592,
+          -0.2178179863494343
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 1904569,
+        "name": "Indonesia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -4.5382403813664505,
+          54.21636145114523
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 572,
+        "name": "Isle of Man"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          79.61306104396546,
+          22.889423954674346
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 3287590,
+        "name": "India"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -7.538033902915051,
+          53.1737009261443
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 70273,
+        "name": "Ireland"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          54.27730407589753,
+          32.57165896161309
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 1648195,
+        "name": "Iran"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          43.74586114744142,
+          33.038846001023714
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 438317,
+        "name": "Iraq"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -18.638958624072707,
+          65.00389572896243
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 103000,
+        "name": "Iceland"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          34.80777293152382,
+          31.00422183175106
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 20770,
+        "name": "Israel"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          12.276658400623094,
+          43.00902320332866
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 301336,
+        "name": "Italy"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -77.31735225909189,
+          18.15684904250852
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 10991,
+        "name": "Jamaica"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          36.30167940717932,
+          30.644583536538727
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 89342,
+        "name": "Jordan"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          138.03689756134938,
+          36.00033502671782
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 377930,
+        "name": "Japan"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          63.38399465415726,
+          45.978139149338155
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "Baykonur Cosmodrome"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          77.17735225277636,
+          35.38920220423236
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "Siachen Glacier"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          67.2952197655476,
+          48.16024921025351
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 2724900,
+        "name": "Kazakhstan"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          37.823407067990274,
+          0.5490568062320167
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 580367,
+        "name": "Kenya"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          74.5366919477672,
+          41.46001372993533
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 199951,
+        "name": "Kyrgyzstan"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          104.90391128428018,
+          12.717080879880257
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 181035,
+        "name": "Cambodia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -157.38341919660382,
+          1.8603384956816746
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 811,
+        "name": "Kiribati"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -62.78246237644971,
+          17.3515157919969
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 261,
+        "name": "Saint Kitts and Nevis"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          127.82706016923491,
+          36.385943346724716
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 100210,
+        "name": "South Korea"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.870306389559815,
+          42.57147635690773
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 10908,
+        "name": "Kosovo"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          47.40005661557301,
+          29.2764519474964
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 17818,
+        "name": "Kuwait"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          102.63808586860808,
+          20.0039749430729
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 236800,
+        "name": "Laos"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          35.878776880742684,
+          33.92329031531281
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 10452,
+        "name": "Lebanon"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -9.32030429815134,
+          6.4550537164866615
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 111369,
+        "name": "Liberia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.00926888563765,
+          27.030211235591207
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 1759540,
+        "name": "Libya"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -60.968843794015186,
+          13.896897651310555
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 616,
+        "name": "Saint Lucia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          9.548477868763191,
+          47.15504683591653
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 160,
+        "name": "Liechtenstein"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          80.70899401285483,
+          7.610291477124094
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 65610,
+        "name": "Sri Lanka"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          28.22779838878177,
+          -29.580025400471087
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 30355,
+        "name": "Lesotho"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          23.89316898821028,
+          55.32880983310714
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 65300,
+        "name": "Lithuania"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          6.080614490215087,
+          49.764526859922185
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 2586,
+        "name": "Luxembourg"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          24.90897297273583,
+          56.84903249458225
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 64559,
+        "name": "Latvia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -6.006077880425423,
+          32.101620643785152
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 446550,
+        "name": "Morocco"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          28.46460657349521,
+          47.19874640478283
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 33846,
+        "name": "Moldova"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          46.70528281930064,
+          -19.372248198101815
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 587041,
+        "name": "Madagascar"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -102.52661118155345,
+          23.9492539529014
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 1964375,
+        "name": "Mexico"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.687204044020906,
+          41.593965100340604
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 25713,
+        "name": "Macedonia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -1.2389307267798036,
+          18.044003768949065
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 1240192,
+        "name": "Mali"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          14.444111418837997,
+          35.88966052046672
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 316,
+        "name": "Malta"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          96.48608918338289,
+          21.17786958144603
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 676578,
+        "name": "Myanmar"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.242474653314023,
+          42.78391838478447
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 13812,
+        "name": "Montenegro"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          103.05554130467463,
+          46.82593617838006
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 1564110,
+        "name": "Mongolia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          145.62563333333333,
+          15.002199999999998
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 464,
+        "name": "Northern Mariana Islands"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          35.537925578243915,
+          -17.268943712115473
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 801590,
+        "name": "Mozambique"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -10.342351841334349,
+          20.2562609173335
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 1030700,
+        "name": "Mauritania"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          57.57325199064237,
+          -20.27959433276465
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 2040,
+        "name": "Mauritius"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          34.290792309579174,
+          -13.216849127573635
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 118484,
+        "name": "Malawi"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          113.39935804835181,
+          2.30574155907992
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 330803,
+        "name": "Malaysia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.211816083321416,
+          -22.1291505926619
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 825615,
+        "name": "Namibia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          165.69413537780542,
+          -21.320849082558723
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 18575,
+        "name": "New Caledonia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          9.38545449606159,
+          17.418051793702492
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 1267000,
+        "name": "Niger"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          8.088042724720935,
+          9.58926773817148
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 923768,
+        "name": "Nigeria"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -85.03526907282496,
+          12.8412958012943
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 130373,
+        "name": "Nicaragua"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -169.8766425625738,
+          -19.048719788254918
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 260,
+        "name": "Niue"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          5.266542316359385,
+          52.078944073311426
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 41850,
+        "name": "Netherlands"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          9.417209105609304,
+          61.80825257094607
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 323802,
+        "name": "Norway"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          83.9128905125251,
+          28.249664782260314
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 147181,
+        "name": "Nepal"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          171.98535311141075,
+          -41.80799566732772
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 270467,
+        "name": "New Zealand"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          56.7217142717143,
+          20.501052841537086
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 309500,
+        "name": "Oman"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          69.34043791363646,
+          29.94685490641385
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 881912,
+        "name": "Pakistan"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -80.10800262763215,
+          8.513785371233512
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 75417,
+        "name": "Panama"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -75.57804380140288,
+          -10.054270643024024
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 1285216,
+        "name": "Peru"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          122.88451740097055,
+          11.765764455152183
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 342353,
+        "name": "Philippines"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          134.56768001971645,
+          7.498097934335564
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 459,
+        "name": "Palau"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          145.19228941026648,
+          -6.470508541014074
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 462840,
+        "name": "Papua New Guinea"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.394397128446943,
+          52.12579878152899
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 312679,
+        "name": "Poland"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -66.47769845267565,
+          18.22500859035048
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 8870,
+        "name": "Puerto Rico"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          127.18094826470691,
+          40.148941128249234
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 120538,
+        "name": "North Korea"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -8.458794597971387,
+          39.60194095307102
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 92090,
+        "name": "Portugal"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -58.39828831819817,
+          -23.227318456754357
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 406752,
+        "name": "Paraguay"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          35.19388175564338,
+          31.915247185954847
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 6220,
+        "name": "Palestine"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -145.95837293122509,
+          -15.112548934934825
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 4167,
+        "name": "French Polynesia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          51.183129116662094,
+          25.316993858854673
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 11586,
+        "name": "Qatar"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          24.973207468304935,
+          45.85312978354918
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 238391,
+        "name": "Romania"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          96.6988823744698,
+          61.97732552565738
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 17098242,
+        "name": "Russia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          29.920308219127538,
+          -1.9920282071529936
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 26338,
+        "name": "Rwanda"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -12.215368885574552,
+          24.232339562144897
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 266000,
+        "name": "Western Sahara"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          44.538633252443816,
+          24.123068505479182
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 2149690,
+        "name": "Saudi Arabia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          29.938853848047977,
+          15.986678679669087
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 1886068,
+        "name": "Sudan"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          30.301433149429624,
+          7.282811541403146
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 619745,
+        "name": "South Sudan"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -14.480610124676494,
+          14.360628418374002
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 196722,
+        "name": "Senegal"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          103.80778176146639,
+          1.35591138463061
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 710,
+        "name": "Singapore"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -36.375731665495856,
+          -54.481852062636904
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "South Georgia and South Sandwich Islands"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -5.7151318505493816,
+          -15.960216613976732
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 394,
+        "name": "Saint Helena, Ascension and Tristan da Cunha"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          159.65010139873343,
+          -8.922533779077368
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 28896,
+        "name": "Solomon Islands"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -11.798921340176344,
+          8.562652904127612
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 71740,
+        "name": "Sierra Leone"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -88.86935069750194,
+          13.733720879806585
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 21041,
+        "name": "El Salvador"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          46.25607082232287,
+          9.731079412188715
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "Somaliland"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          44.00623101390357,
+          2.748745901224443
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 637657,
+        "name": "Somalia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -56.31805404364972,
+          46.963246738168564
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 242,
+        "name": "Saint Pierre and Miquelon"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.793628708080142,
+          44.21718747640044
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 88361,
+        "name": "Serbia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          6.679037188466178,
+          0.3635892998165817
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 964,
+        "name": "São Tomé and Príncipe"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -55.91032111207807,
+          4.132162333361748
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 163820,
+        "name": "Suriname"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.479199572193153,
+          48.70349108898923
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 49037,
+        "name": "Slovakia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          14.797063559418316,
+          46.116632986431895
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 20273,
+        "name": "Slovenia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          14.754781106843584,
+          59.788914136498484
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 450295,
+        "name": "Sweden"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          31.4832528771155,
+          -26.562201002086997
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 17364,
+        "name": "Eswatini"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          38.503106327085206,
+          35.02276784731906
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 185180,
+        "name": "Syria"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.646623754807102,
+          15.332525159550649
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 1284000,
+        "name": "Chad"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.9636856878344362,
+          8.524967628187493
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 56785,
+        "name": "Togo"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          101.00750177196012,
+          15.126501390853464
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 513120,
+        "name": "Thailand"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          71.01795630670951,
+          38.866700297637696
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 143100,
+        "name": "Tajikistan"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          59.38173975812372,
+          39.117036911406586
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 488100,
+        "name": "Turkmenistan"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          125.86208303602793,
+          -8.822910178932656
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 14874,
+        "name": "Timor-Leste"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -174.7041971686933,
+          -20.064800279002416
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 747,
+        "name": "Tonga"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -61.25150203309995,
+          10.469227197551147
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 5130,
+        "name": "Trinidad and Tobago"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          9.752569504183115,
+          35.218192801930284
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 163610,
+        "name": "Tunisia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          35.167016648761596,
+          39.06118205187839
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 783562,
+        "name": "Turkey"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          120.9640840368129,
+          23.753730189895762
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 36193,
+        "name": "Taiwan"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          34.81302419165463,
+          -6.275359989669027
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 945087,
+        "name": "Tanzania"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          32.36697882632118,
+          1.2762676292071913
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 241550,
+        "name": "Uganda"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          31.38654278916557,
+          48.99873267439047
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 603500,
+        "name": "Ukraine"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -56.01575047502944,
+          -32.80038376569887
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 181034,
+        "name": "Uruguay"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -100.51046314046138,
+          40.69166470687298
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 9372610,
+        "name": "United States"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          63.14021212695566,
+          41.75548613963243
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 447400,
+        "name": "Uzbekistan"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -61.201581554180194,
+          13.253598534933515
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 389,
+        "name": "Saint Vincent and the Grenadines"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -65.17150801648957,
+          7.827363485885876
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 916445,
+        "name": "Venezuela"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -64.79417085026634,
+          17.737109974366696
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 347,
+        "name": "United States Virgin Islands"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          107.80041710819121,
+          11.543248766323648
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 331212,
+        "name": "Vietnam"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          167.6826838975644,
+          -16.2475672175271
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 12189,
+        "name": "Vanuatu"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          32.86953333333333,
+          34.66283333333333
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "Akrotiri Sovereign Base Area"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -172.16520846162933,
+          -13.752262872152125
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 2842,
+        "name": "Samoa"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          47.589759921003875,
+          15.909034385490992
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 527968,
+        "name": "Yemen"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          25.085383273651512,
+          -28.999006555884414
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 1221037,
+        "name": "South Africa"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          26.306132105481572,
+          -15.059436995290572
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 752612,
+        "name": "Zambia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          29.84984769855173,
+          -19.002821278903767
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 390757,
+        "name": "Zimbabwe"
+      },
+      "type": "Feature"
+    }
+  ],
+  "type": "FeatureCollection"
+}

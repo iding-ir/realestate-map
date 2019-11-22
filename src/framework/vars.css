@@ -1,0 +1,48 @@
+:root {
+  --color-primary-light: #e91e63;
+  --color-primary-dark: #c2185b;
+  --color-secondary-light: #03a9f4;
+  --color-secondary-dark: #0288d1;
+
+  --color-transparent: rgba(0, 0, 0, 0);
+
+  --color-lighter: #eceff1;
+  --color-light: #cfd8dc;
+  --color-dark: #37474f;
+  --color-darker: #263238;
+
+  --color-grey-sm: #dedede;
+  --color-grey-md: #bcbcbc;
+  --color-grey-lg: #9a9a9a;
+
+  --padding-sm: 0.5rem;
+  --padding-md: 1rem;
+  --padding-lg: 2rem;
+
+  --icon-sm: 1.6rem;
+  --icon-md: 2rem;
+  --icon-lg: 2.4rem;
+
+  --border-radius: 4px;
+  --border-thickness: 2px;
+
+  --transition-sm: 0.3s ease;
+  --transition-md: 0.5s ease;
+  --transition-lg: 0.7s ease;
+
+  --box-shadow-sm: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  --box-shadow-md: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  --box-shadow-lg: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+  --fade-dark-sm: rgba(0, 0, 0, 0.1);
+  --fade-dark-md: rgba(0, 0, 0, 0.2);
+  --fade-dark-lg: rgba(0, 0, 0, 0.3);
+
+  --fade-grey-sm: rgba(121, 121, 121, 0.1);
+  --fade-grey-md: rgba(121, 121, 121, 0.2);
+  --fade-grey-lg: rgba(121, 121, 121, 0.3);
+
+  --fade-light-sm: rgba(255, 255, 255, 0.1);
+  --fade-light-md: rgba(255, 255, 255, 0.2);
+  --fade-light-lg: rgba(255, 255, 255, 0.3);
+}
