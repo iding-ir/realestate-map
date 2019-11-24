@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./app.css";
 import $ from "jquery";
 import Mapcraft from "./mapcraft";
+import Search from "./search";
 
 class App extends Component {
   state = {
@@ -13,14 +14,25 @@ class App extends Component {
       { slug: "house", name: "House", checked: true },
       { slug: "communal", name: "Communal", checked: true }
     ],
+    rooms: [
+      { slug: "one", name: "One", checked: false },
+      { slug: "two", name: "Two", checked: false },
+      { slug: "more", name: "More", checked: false },
+      { slug: "any", name: "Any", checked: true }
+    ],
+    areas: {
+      from: 20,
+      to: 200
+    },
     rents: {
-      from: 7000,
-      to: 20000
+      from: 3000,
+      to: 50000
     },
     deposits: {
-      from: 15000,
-      to: 40000
-    }
+      from: 10000,
+      to: 200000
+    },
+    places: {}
   };
 
   componentDidMount() {
@@ -44,11 +56,15 @@ class App extends Component {
     });
 
     this.mapcraft.load().then(() => {
+      this.handleFilter();
+      this.handleGeoJson();
+
       this.mapcraft.map.on("click", "point-symbol-places", event => {
         let {
           title,
           description,
           type,
+          rooms,
           area,
           rent,
           deposit
@@ -59,16 +75,48 @@ class App extends Component {
           coordinates[0] += event.lngLat.lng > coordinates[0] ? 360 : -360;
         }
 
-        let html = `<div class="card">
-            <div class="card-header"><h6>${title}</h6></div>
+        let html = `<div class="card borderless">
+          <div class="card-header"><h6>${title}</h6></div>
             <div class="card-body">
-              <p>${description}</p>
-              <p>Type: ${type}</p>
-              <p>Area: ${area}</p>
-              <p>Rent: ${rent}</p>
-              <p>Deposit: ${deposit}</p>
+              <table class="table">
+                <caption>${description}</caption>
+
+                <thead>
+                  <tr>
+                    <th>A</th>
+                    <th>B</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>Type</td>
+                    <td>${type}</td>
+                  </tr>
+
+                  <tr>
+                    <td>Rooms</td>
+                    <td>${rooms}</td>
+                  </tr>
+
+                  <tr>
+                    <td>Area</td>
+                    <td>${area}</td>
+                  </tr>
+
+                  <tr>
+                    <td>Rent</td>
+                    <td>${rent}</td>
+                  </tr>
+
+                  <tr>
+                    <td>Deposit</td>
+                    <td>${deposit}</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            </div>`;
+          </div>`;
 
         this.mapcraft.openPopup({
           lnglat: coordinates,
@@ -79,8 +127,6 @@ class App extends Component {
   }
 
   render() {
-    let types = [...this.state.types];
-
     return (
       <div className="app">
         <main className="app-main">
@@ -88,149 +134,118 @@ class App extends Component {
         </main>
 
         <div className="app-sidebar">
-          <form className="form">
-            <h6>Types</h6>
-
-            <div className="form-group grid grid-2">
-              {types.map((type, index) => {
-                return (
-                  <div className="form-checkbox" key={index}>
-                    <input
-                      type="checkbox"
-                      name="types"
-                      id={type.slug}
-                      data-type={type.slug}
-                      checked={type.checked}
-                      onChange={event => {
-                        this.handleChangeLayer(event);
-                      }}
-                    />
-
-                    <label htmlFor={type.slug}>
-                      <i className="icon-check"></i>
-
-                      <span>{type.name}</span>
-                    </label>
-                  </div>
-                );
-              })}
-            </div>
-
-            <h6>Rent</h6>
-
-            <div className="form-group grid-2">
-              <div className="form-range">
-                <label htmlFor="app-rent-from">
-                  Rent from: {this.state.rents.from}
-                </label>
-
-                <input
-                  type="range"
-                  min="5000"
-                  max="30000"
-                  step="1000"
-                  value={this.state.rents.from}
-                  id="app-rent-from"
-                  name="app-rent-from"
-                  onChange={event => {
-                    this.handleChangeRent(event, "from");
-                  }}
-                />
-              </div>
-
-              <div className="form-range">
-                <label htmlFor="app-rent-to">
-                  Rent to: {this.state.rents.to}
-                </label>
-
-                <input
-                  type="range"
-                  min="5000"
-                  max="30000"
-                  step="1000"
-                  value={this.state.rents.to}
-                  id="app-rent-to"
-                  name="app-rent-to"
-                  onChange={event => {
-                    this.handleChangeRent(event, "to");
-                  }}
-                />
-              </div>
-            </div>
-
-            <h6>Deposit</h6>
-
-            <div className="form-group grid-2">
-              <div className="form-range">
-                <label htmlFor="app-deposit-from">
-                  Deposit from: {this.state.deposits.from}
-                </label>
-
-                <input
-                  type="range"
-                  min="10000"
-                  max="50000"
-                  step="1000"
-                  value={this.state.deposits.from}
-                  id="app-deposit-from"
-                  name="app-deposit-from"
-                  onChange={event => {
-                    this.handleChangeDeposit(event, "from");
-                  }}
-                />
-              </div>
-
-              <div className="form-range">
-                <label htmlFor="app-deposit-to">
-                  Deposit to: {this.state.deposits.to}
-                </label>
-
-                <input
-                  type="range"
-                  min="10000"
-                  max="50000"
-                  step="1000"
-                  value={this.state.deposits.to}
-                  id="app-deposit-to"
-                  name="app-deposit-to"
-                  onChange={event => {
-                    this.handleChangeDeposit(event, "to");
-                  }}
-                />
-              </div>
-            </div>
-          </form>
+          <Search
+            state={this.state}
+            onFilter={this.handleFilter}
+            onChangeType={this.handleChangeType}
+            onChangeRoom={this.handleChangeRoom}
+            onChangeArea={this.handleChangeArea}
+            onChangeRent={this.handleChangeRent}
+            onChangeDeposit={this.handleChangeDeposit}
+            getPlacesCount={this.getPlacesCount}
+          />
         </div>
       </div>
     );
   }
 
+  getPlacesCount = () => {
+    let count = this.state.places.features
+      ? this.state.places.features.length
+      : 0;
+
+    return count;
+  };
+
   handleFilter = () => {
-    let { rents, deposits, types } = this.state;
+    let { types, rooms, areas, rents, deposits } = this.state;
 
     let filters = [
       "all",
-      [">=", "deposit", deposits.from],
-      ["<=", "deposit", deposits.to],
+      [">=", "area", areas.from],
+      ["<=", "area", areas.to],
       [">=", "rent", rents.from],
-      ["<=", "rent", rents.to]
+      ["<=", "rent", rents.to],
+      [">=", "deposit", deposits.from],
+      ["<=", "deposit", deposits.to]
     ];
 
-    let typesFilter = types.reduce(
-      (total, current) => {
-        if (current.checked) total.push(["==", "type", current.slug]);
+    let typesFilter = types
+      .filter(item => item.checked)
+      .reduce(
+        (total, current) => {
+          total.push(["==", "type", current.slug]);
 
-        return total;
-      },
-      ["any"]
-    );
+          return total;
+        },
+        ["any"]
+      );
 
     filters.push(typesFilter);
+
+    let roomsFilter = rooms
+      .filter(item => item.checked)
+      .reduce(
+        (total, current) => {
+          if (current.slug === "one") total.push(["==", "rooms", 1]);
+          if (current.slug === "two") total.push(["==", "rooms", 2]);
+          if (current.slug === "more") total.push([">", "rooms", 2]);
+          if (current.slug === "any") total.push([">=", "rooms", 0]);
+
+          return total;
+        },
+        ["any"]
+      );
+
+    filters.push(roomsFilter);
 
     this.mapcraft.map.setFilter("point-symbol-places", filters);
   };
 
-  handleChangeLayer = event => {
+  handleGeoJson = () => {
+    let { types, rooms, areas, rents, deposits } = this.state;
+
+    let selectedTypes = types
+      .filter(type => type.checked)
+      .map(type => type.slug);
+
+    let selectedRooms = rooms
+      .filter(room => room.checked)
+      .map(room => room.slug);
+
+    let places = { ...this.mapcraft.geoJsons.places };
+
+    let features = places.features.filter(feature => {
+      let { type, rooms, area, rent, deposit } = feature.properties;
+
+      if (
+        selectedTypes.includes(type) &&
+        area >= areas.from &&
+        area <= areas.to &&
+        rent >= rents.from &&
+        rent <= rents.to &&
+        deposit >= deposits.from &&
+        deposit <= deposits.to
+      ) {
+        if (
+          (rooms === 1 && selectedRooms.includes("one")) ||
+          (rooms === 2 && selectedRooms.includes("two")) ||
+          (rooms > 2 && selectedRooms.includes("more")) ||
+          selectedRooms.includes("any")
+        ) {
+          return true;
+        }
+      }
+
+      return false;
+    });
+
+    places.features = features;
+
+    this.setState({ places });
+  };
+
+  handleChangeType = event => {
     let slug = $(event.target).attr("data-type");
     let types = [...this.state.types].map(type => {
       if (type.slug === slug) type.checked = $(event.target).is(":checked");
@@ -241,6 +256,33 @@ class App extends Component {
     this.setState({ types });
 
     this.handleFilter();
+    this.handleGeoJson();
+  };
+
+  handleChangeRoom = event => {
+    let slug = $(event.target).attr("data-room");
+    let rooms = [...this.state.rooms].map(room => {
+      room.checked = room.slug === slug ? true : false;
+
+      return room;
+    });
+
+    this.setState({ rooms });
+
+    this.handleFilter();
+    this.handleGeoJson();
+  };
+
+  handleChangeArea = (event, extent) => {
+    let value = parseInt($(event.target).val());
+    let areas = { ...this.state.areas };
+
+    areas[extent] = value;
+
+    this.setState({ areas });
+
+    this.handleFilter();
+    this.handleGeoJson();
   };
 
   handleChangeRent = (event, extent) => {
@@ -252,6 +294,7 @@ class App extends Component {
     this.setState({ rents });
 
     this.handleFilter();
+    this.handleGeoJson();
   };
 
   handleChangeDeposit = (event, extent) => {
@@ -263,6 +306,7 @@ class App extends Component {
     this.setState({ deposits });
 
     this.handleFilter();
+    this.handleGeoJson();
   };
 }
 

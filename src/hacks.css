@@ -1,0 +1,76 @@
+.mapboxgl-popup {
+  font-family: inherit !important;
+  max-width: none !important;
+}
+
+.mapboxgl-popup-content {
+  width: 22rem !important;
+  padding: 0 !important;
+  border-radius: var(--border-radius) !important;
+  box-shadow: var(--box-shadow-md) !important;
+  background-color: var(--color-lighter) !important;
+}
+
+.mapboxgl-ctrl {
+  border-radius: var(--border-radius) !important;
+  border: var(--border-thickness) solid var(--color-primary-light) !important;
+  box-shadow: var(--box-shadow-md) !important;
+}
+
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-tip {
+  border-top-color: var(--color-lighter) !important;
+}
+
+.mapboxgl-popup-anchor-top .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip {
+  border-bottom-color: var(--color-lighter) !important;
+}
+
+.mapboxgl-popup-anchor-left .mapboxgl-popup-tip {
+  border-right-color: var(--color-lighter) !important;
+}
+
+.mapboxgl-popup-anchor-right .mapboxgl-popup-tip {
+  border-left-color: var(--color-lighter) !important;
+}
+
+.mapboxgl-ctrl-top-left .mapboxgl-ctrl {
+  margin: var(--padding-md) 0 0 var(--padding-md) !important;
+}
+
+.mapboxgl-ctrl-top-right .mapboxgl-ctrl {
+  margin: var(--padding-md) var(--padding-md) 0 0 !important;
+}
+
+.mapboxgl-ctrl-bottom-left .mapboxgl-ctrl {
+  margin: 0 0 var(--padding-md) var(--padding-md) !important;
+}
+
+.mapboxgl-ctrl-bottom-right .mapboxgl-ctrl {
+  margin: 0 var(--padding-md) var(--padding-md) 0 !important;
+}
+
+.mapboxgl-ctrl-group > button {
+  width: var(--icon-lg) !important;
+  height: var(--icon-lg) !important;
+  transition: var(--transition-sm) !important;
+}
+
+.mapboxgl-ctrl > button:not(:disabled):hover {
+  background-color: var(--color-light) !important;
+}
+
+.mapboxgl-ctrl-icon {
+  border-color: var(--color-primary-light) !important;
+}
+
+.mapboxgl-ctrl-icon > span {
+  width: 100% !important;
+  height: 100% !important;
+  background-size: var(--icon-sm) !important;
+  background-position: center !important;
+  margin: 0 !important;
+}

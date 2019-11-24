@@ -1,13 +1,13 @@
 :root {
-  --color-primary-light: #e91e63;
-  --color-primary-dark: #c2185b;
-  --color-secondary-light: #03a9f4;
-  --color-secondary-dark: #0288d1;
+  --color-primary-light: #03a9f4;
+  --color-primary-dark: #0288d1;
+  --color-secondary-light: #e91e63;
+  --color-secondary-dark: #c2185b;
 
   --color-transparent: rgba(0, 0, 0, 0);
 
-  --color-lighter: #eceff1;
-  --color-light: #cfd8dc;
+  --color-lighter: #f5f5f5;
+  --color-light: #eceff1;
   --color-dark: #37474f;
   --color-darker: #263238;
 
@@ -20,19 +20,23 @@
   --padding-lg: 2rem;
 
   --icon-sm: 1.6rem;
-  --icon-md: 2rem;
-  --icon-lg: 2.4rem;
+  --icon-md: 2.2rem;
+  --icon-lg: 2.8rem;
 
   --border-radius: 4px;
-  --border-thickness: 2px;
+  --border-thickness: 1px;
 
   --transition-sm: 0.3s ease;
   --transition-md: 0.5s ease;
   --transition-lg: 0.7s ease;
 
-  --box-shadow-sm: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  --box-shadow-md: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  --box-shadow-lg: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  --box-shadow-sm: 0px 0px 4px rgba(0, 0, 0, 0.1);
+  --box-shadow-md: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  --box-shadow-lg: 0px 0px 4px rgba(0, 0, 0, 0.3);
+
+  --box-shadow-inset-sm: 0px 0px 4px inset rgba(0, 0, 0, 0.1);
+  --box-shadow-inset-md: 0px 0px 4px inset rgba(0, 0, 0, 0.2);
+  --box-shadow-inset-lg: 0px 0px 4px inset rgba(0, 0, 0, 0.3);
 
   --fade-dark-sm: rgba(0, 0, 0, 0.1);
   --fade-dark-md: rgba(0, 0, 0, 0.2);
