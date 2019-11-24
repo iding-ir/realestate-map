@@ -33,6 +33,9 @@ export default class Mapcraft {
         map: {
           container: "",
           center: [35, 35],
+          zoom: 2,
+          pitch: 0,
+          bearing: 0,
           hash: true
         },
         defaultMapColors: {
@@ -128,7 +131,9 @@ export default class Mapcraft {
     this.map = new mapboxgl.Map({
       container: this.options.map.container,
       center: this.options.map.center,
-      zoom: 2,
+      zoom: this.options.map.zoom,
+      pitch: this.options.map.pitch,
+      bearing: this.options.map.bearing,
       minZoom: 2,
       maxZoom: 20,
       hash: this.options.map.hash,
@@ -532,7 +537,9 @@ export default class Mapcraft {
   fitBounds(opt) {
     const options = Object.assign(
       {
-        geoJson: {}
+        geoJson: {},
+        pitch: 0,
+        bearing: 0
       },
       opt
     );
@@ -542,7 +549,9 @@ export default class Mapcraft {
     const bbox = polygon.bbox();
 
     this.map.fitBounds(bbox, {
-      padding: 100
+      padding: 100,
+      pitch: options.pitch,
+      bearing: options.bearing
     });
   }
 

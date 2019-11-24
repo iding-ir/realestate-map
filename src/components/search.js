@@ -15,23 +15,23 @@ class Sreach extends Component {
 
     return (
       <React.Fragment>
-        <header>
+        <header className="sc-slide-header">
           <h5>Filters</h5>
 
           <i
-            className="icon-search lg app-sidebar-toggle"
+            className="sc-icon-menu sc-slide-toggle"
             onClick={this.handleToggleSidebar}
           ></i>
         </header>
 
-        <section>
-          <form className="form">
+        <div className="sc-slide-body">
+          <form className="sc-form">
             <h6>Type</h6>
 
-            <div className="form-group grid grid-2">
+            <div className="sc-form-group sc-grid-2">
               {state.types.map((type, index) => {
                 return (
-                  <div className="form-checkbox" key={index}>
+                  <div className="sc-form-checkbox" key={index}>
                     <input
                       type="checkbox"
                       name="types"
@@ -44,7 +44,7 @@ class Sreach extends Component {
                     />
 
                     <label htmlFor={type.slug}>
-                      <i className="icon-checkbox"></i>
+                      <i className="sc-icon-checkbox"></i>
 
                       <span>{type.name}</span>
                     </label>
@@ -55,10 +55,10 @@ class Sreach extends Component {
 
             <h6>Rooms</h6>
 
-            <div className="form-group grid grid-2">
+            <div className="sc-form-group sc-grid-2">
               {state.rooms.map((room, index) => {
                 return (
-                  <div className="form-radio" key={index}>
+                  <div className="sc-form-radio" key={index}>
                     <input
                       type="radio"
                       name="rooms"
@@ -71,7 +71,7 @@ class Sreach extends Component {
                     />
 
                     <label htmlFor={room.slug}>
-                      <i className="icon-radio"></i>
+                      <i className="sc-icon-radio"></i>
 
                       <span>{room.name}</span>
                     </label>
@@ -82,8 +82,8 @@ class Sreach extends Component {
 
             <h6>Area</h6>
 
-            <div className="form-group grid-2">
-              <div className="form-range">
+            <div className="sc-form-group sc-grid-2">
+              <div className="sc-form-range">
                 <label htmlFor="app-area-from">{state.areas.from}</label>
 
                 <input
@@ -100,7 +100,7 @@ class Sreach extends Component {
                 />
               </div>
 
-              <div className="form-range">
+              <div className="sc-form-range">
                 <label htmlFor="app-area-to">{state.areas.to}</label>
 
                 <input
@@ -120,8 +120,8 @@ class Sreach extends Component {
 
             <h6>Rent</h6>
 
-            <div className="form-group grid-2">
-              <div className="form-range">
+            <div className="sc-form-group sc-grid-2">
+              <div className="sc-form-range">
                 <label htmlFor="app-rent-from">{state.rents.from}</label>
 
                 <input
@@ -138,7 +138,7 @@ class Sreach extends Component {
                 />
               </div>
 
-              <div className="form-range">
+              <div className="sc-form-range">
                 <label htmlFor="app-rent-to">{state.rents.to}</label>
 
                 <input
@@ -158,8 +158,8 @@ class Sreach extends Component {
 
             <h6>Deposit</h6>
 
-            <div className="form-group grid-2">
-              <div className="form-range">
+            <div className="sc-form-group sc-grid-2">
+              <div className="sc-form-range">
                 <label htmlFor="app-deposit-from">{state.deposits.from}</label>
 
                 <input
@@ -176,7 +176,7 @@ class Sreach extends Component {
                 />
               </div>
 
-              <div className="form-range">
+              <div className="sc-form-range">
                 <label htmlFor="app-deposit-to">{state.deposits.to}</label>
 
                 <input
@@ -194,17 +194,17 @@ class Sreach extends Component {
               </div>
             </div>
           </form>
-        </section>
+        </div>
 
-        <footer>
-          <h5>Results found: {this.getPlacesCount()}</h5>
+        <footer className="sc-slide-footer">
+          <h6>Results found: {this.getPlacesCount()}</h6>
 
-          <div className="form-group grid-1">
-            <div className="form-button">
+          <div className="sc-form-group sc-grid-1">
+            <div className="sc-form-button sc-stretched">
               <button>
-                {/* <i className="icon-search"></i> */}
+                <i className="sc-icon-search"></i>
 
-                <span>Tour the results</span>
+                <span>Tour through the results</span>
               </button>
             </div>
           </div>
@@ -220,7 +220,7 @@ class Sreach extends Component {
   };
 
   handleToggleSidebar = () => {
-    $(".app-sidebar").toggleClass("is-hidden");
+    $(".sc-slide").toggleClass("sc-is-open");
   };
 }
 

@@ -1,3 +1,7 @@
-#root {
+html,
+body,
+#root,
+.app,
+#app-map {
   height: 100%;
 }

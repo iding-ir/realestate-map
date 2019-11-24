@@ -42,9 +42,9 @@
   --fade-dark-md: rgba(0, 0, 0, 0.2);
   --fade-dark-lg: rgba(0, 0, 0, 0.3);
 
-  --fade-grey-sm: rgba(121, 121, 121, 0.1);
-  --fade-grey-md: rgba(121, 121, 121, 0.2);
-  --fade-grey-lg: rgba(121, 121, 121, 0.3);
+  --fade-grey-sm: rgba(110, 110, 110, 0.4);
+  --fade-grey-md: rgba(110, 110, 110, 0.5);
+  --fade-grey-lg: rgba(110, 110, 110, 0.6);
 
   --fade-light-sm: rgba(255, 255, 255, 0.1);
   --fade-light-md: rgba(255, 255, 255, 0.2);

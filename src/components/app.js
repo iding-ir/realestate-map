@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./app.css";
 import $ from "jquery";
 import Mapcraft from "./mapcraft";
 import Search from "./search";
@@ -39,8 +38,11 @@ class App extends Component {
     this.mapcraft = new Mapcraft({
       map: {
         container: "app-map",
-        center: [35, 35],
-        hash: true
+        center: [0, 0],
+        zoom: 3,
+        pitch: 50,
+        bearing: 0,
+        hash: false
       },
       icons: {
         apartment: "./assets/images/icon-apartment.png",
@@ -57,7 +59,14 @@ class App extends Component {
 
     this.mapcraft.load().then(() => {
       this.handleFilter();
-      this.handleGeoJson();
+
+      setTimeout(() => {
+        this.handleGeoJson();
+      }, 2500);
+
+      setTimeout(() => {
+        $(".sc-slide").addClass("sc-is-open");
+      }, 4000);
 
       this.mapcraft.map.on("click", "point-symbol-places", event => {
         let {
@@ -75,18 +84,11 @@ class App extends Component {
           coordinates[0] += event.lngLat.lng > coordinates[0] ? 360 : -360;
         }
 
-        let html = `<div class="card borderless">
-          <div class="card-header"><h6>${title}</h6></div>
-            <div class="card-body">
-              <table class="table">
+        let html = `<div class="sc-card sc-borderless">
+          <div class="sc-card-header"><h6>${title}</h6></div>
+            <div class="sc-card-body">
+              <table class="sc-table">
                 <caption>${description}</caption>
-
-                <thead>
-                  <tr>
-                    <th>A</th>
-                    <th>B</th>
-                  </tr>
-                </thead>
 
                 <tbody>
                   <tr>
@@ -129,11 +131,9 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <main className="app-main">
-          <div id="app-map"></div>
-        </main>
+        <div id="app-map"></div>
 
-        <div className="app-sidebar">
+        <div className="sc-slide">
           <Search
             state={this.state}
             onFilter={this.handleFilter}
@@ -243,6 +243,11 @@ class App extends Component {
     places.features = features;
 
     this.setState({ places });
+
+    if (places.features.length)
+      this.mapcraft.fitBounds({
+        geoJson: places
+      });
   };
 
   handleChangeType = event => {
