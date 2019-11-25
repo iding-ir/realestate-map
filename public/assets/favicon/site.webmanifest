@@ -1,18 +1,24 @@
 {
-    "name": "G2",
-    "short_name": "G2",
-    "icons": [
-        {
-            "src": "./assets/favicon/android-chrome-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "./assets/favicon/android-chrome-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ],
-    "theme_color": "#1e88e5",
-    "background_color": "#1e88e5"
+  "name": "React map filter",
+  "short_name": "React map",
+  "icons": [{
+      "src": "./assets/favicon/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "./assets/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1e88e5",
+  "background_color": "#1e88e5"
 }

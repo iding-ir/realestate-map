@@ -35,97 +35,7 @@ class App extends Component {
   };
 
   componentDidMount() {
-    this.mapcraft = new Mapcraft({
-      map: {
-        container: "app-map",
-        center: [0, 0],
-        zoom: 3,
-        pitch: 50,
-        bearing: 0,
-        hash: false
-      },
-      icons: {
-        apartment: "./assets/images/icon-apartment.png",
-        commercial: "./assets/images/icon-commercial.png",
-        studio: "./assets/images/icon-studio.png",
-        dorm: "./assets/images/icon-dorm.png",
-        house: "./assets/images/icon-house.png",
-        communal: "./assets/images/icon-communal.png"
-      },
-      geoJsons: {
-        places: "./data/places.json"
-      }
-    });
-
-    this.mapcraft.load().then(() => {
-      this.handleFilter();
-
-      setTimeout(() => {
-        this.handleGeoJson();
-      }, 2500);
-
-      setTimeout(() => {
-        $(".sc-slide").addClass("sc-is-open");
-      }, 4000);
-
-      this.mapcraft.map.on("click", "point-symbol-places", event => {
-        let {
-          title,
-          description,
-          type,
-          rooms,
-          area,
-          rent,
-          deposit
-        } = event.features[0].properties;
-        let coordinates = event.features[0].geometry.coordinates.slice();
-
-        while (Math.abs(event.lngLat.lng - coordinates[0]) > 180) {
-          coordinates[0] += event.lngLat.lng > coordinates[0] ? 360 : -360;
-        }
-
-        let html = `<div class="sc-card sc-borderless">
-          <div class="sc-card-header"><h6>${title}</h6></div>
-            <div class="sc-card-body">
-              <table class="sc-table">
-                <caption>${description}</caption>
-
-                <tbody>
-                  <tr>
-                    <td>Type</td>
-                    <td>${type}</td>
-                  </tr>
-
-                  <tr>
-                    <td>Rooms</td>
-                    <td>${rooms}</td>
-                  </tr>
-
-                  <tr>
-                    <td>Area</td>
-                    <td>${area}</td>
-                  </tr>
-
-                  <tr>
-                    <td>Rent</td>
-                    <td>${rent}</td>
-                  </tr>
-
-                  <tr>
-                    <td>Deposit</td>
-                    <td>${deposit}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>`;
-
-        this.mapcraft.openPopup({
-          lnglat: coordinates,
-          html: html
-        });
-      });
-    });
+    this.InitializeMap();
   }
 
   render() {
@@ -150,11 +60,9 @@ class App extends Component {
   }
 
   getPlacesCount = () => {
-    let count = this.state.places.features
-      ? this.state.places.features.length
-      : 0;
+    let features = this.state.places.features;
 
-    return count;
+    return features && features.length ? features.length : "No";
   };
 
   handleFilter = () => {
@@ -312,6 +220,100 @@ class App extends Component {
 
     this.handleFilter();
     this.handleGeoJson();
+  };
+
+  InitializeMap = () => {
+    this.mapcraft = new Mapcraft({
+      map: {
+        container: "app-map",
+        center: [0, 0],
+        zoom: 3,
+        pitch: 50,
+        bearing: 0,
+        hash: false
+      },
+      icons: {
+        apartment: "./assets/images/icon-apartment.png",
+        commercial: "./assets/images/icon-commercial.png",
+        studio: "./assets/images/icon-studio.png",
+        dorm: "./assets/images/icon-dorm.png",
+        house: "./assets/images/icon-house.png",
+        communal: "./assets/images/icon-communal.png"
+      },
+      geoJsons: {
+        places: "./data/places.json"
+      }
+    });
+
+    this.mapcraft.load().then(() => {
+      this.handleFilter();
+
+      setTimeout(() => {
+        this.handleGeoJson();
+      }, 2500);
+
+      setTimeout(() => {
+        $(".sc-slide").addClass("sc-is-open");
+      }, 4000);
+
+      this.mapcraft.map.on("click", "point-symbol-places", event => {
+        let {
+          title,
+          description,
+          type,
+          rooms,
+          area,
+          rent,
+          deposit
+        } = event.features[0].properties;
+        let coordinates = event.features[0].geometry.coordinates.slice();
+
+        while (Math.abs(event.lngLat.lng - coordinates[0]) > 180) {
+          coordinates[0] += event.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+
+        let html = `<div class="sc-card sc-borderless">
+          <div class="sc-card-header"><h5>${title}</h5></div>
+            <div class="sc-card-body">
+              <table class="sc-table">
+                <p>${description}</p>
+
+                <tbody>
+                  <tr>
+                    <td>Type</td>
+                    <td>${type}</td>
+                  </tr>
+
+                  <tr>
+                    <td>Rooms</td>
+                    <td>${rooms}</td>
+                  </tr>
+
+                  <tr>
+                    <td>Area</td>
+                    <td>${area}</td>
+                  </tr>
+
+                  <tr>
+                    <td>Rent</td>
+                    <td>${rent}</td>
+                  </tr>
+
+                  <tr>
+                    <td>Deposit</td>
+                    <td>${deposit}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>`;
+
+        this.mapcraft.openPopup({
+          lnglat: coordinates,
+          html: html
+        });
+      });
+    });
   };
 }
 

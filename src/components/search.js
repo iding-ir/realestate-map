@@ -10,7 +10,8 @@ class Sreach extends Component {
       onChangeRoom,
       onChangeArea,
       onChangeRent,
-      onChangeDeposit
+      onChangeDeposit,
+      getPlacesCount
     } = this.props;
 
     return (
@@ -197,7 +198,7 @@ class Sreach extends Component {
         </div>
 
         <footer className="sc-slide-footer">
-          <h6>Results found: {this.getPlacesCount()}</h6>
+          <h6>{getPlacesCount()} results found.</h6>
 
           <div className="sc-form-group sc-grid-1">
             <div className="sc-form-button sc-stretched">
@@ -212,12 +213,6 @@ class Sreach extends Component {
       </React.Fragment>
     );
   }
-
-  getPlacesCount = () => {
-    return this.props.state.places.features
-      ? this.props.state.places.features.length
-      : 0;
-  };
 
   handleToggleSidebar = () => {
     $(".sc-slide").toggleClass("sc-is-open");
