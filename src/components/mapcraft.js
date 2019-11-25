@@ -11,14 +11,25 @@ import Terraformer from "terraformer";
 
 export default class Mapcraft {
   constructor(opt) {
-    this.appUrl = this.getAppUrl();
-
     this.options = Object.assign(
       {
         env: {
           mapbox: {
             token: ""
           }
+        },
+        map: {
+          container: "",
+          center: [35, 35],
+          zoom: 2,
+          pitch: 0,
+          bearing: 0,
+          hash: true
+        },
+        controls: {
+          fullscreen: false,
+          geolocation: true,
+          navigation: true
         },
         colors: {
           light: {
@@ -29,14 +40,6 @@ export default class Mapcraft {
             primary: "#455A64",
             secondary: "#FFA000"
           }
-        },
-        map: {
-          container: "",
-          center: [35, 35],
-          zoom: 2,
-          pitch: 0,
-          bearing: 0,
-          hash: true
         },
         defaultMapColors: {
           light: {
@@ -52,17 +55,14 @@ export default class Mapcraft {
             text: "#E1F5FE"
           }
         },
-        controls: {
-          fullscreen: false,
-          geolocation: true,
-          navigation: true
-        },
         styles: {
-          light: "./assets/jsons/styles/light/style.json",
-          dark: "./assets/jsons/styles/dark/style.json"
+          light: "./mapcraft/jsons/styles/light/style.json",
+          dark: "./mapcraft/jsons/styles/dark/style.json"
         },
-        style: "light",
-        icons: {},
+        defaultStyle: "light",
+        icons: {
+          default: "./mapcraft/images/icon-default.png"
+        },
         defaultIcon: "default",
         geoJsons: {},
         layers: {
@@ -76,6 +76,20 @@ export default class Mapcraft {
           },
           point: {
             symbol: true
+          }
+        },
+        sourcePrefix: "",
+        layersPrefixes: {
+          polygon: {
+            fill: "polygon-fill-",
+            line: "polygon-line-"
+          },
+          polyline: {
+            line: "polyline-line-",
+            symbol: "polyline-symbol-"
+          },
+          point: {
+            symbol: "point-symbol-"
           }
         }
       },
@@ -128,28 +142,33 @@ export default class Mapcraft {
   buildMap() {
     mapboxgl.accessToken = this.options.env.mapbox.token;
 
+    const { container, center, zoom, pitch, bearing, hash } = this.options.map;
+
     this.map = new mapboxgl.Map({
-      container: this.options.map.container,
-      center: this.options.map.center,
-      zoom: this.options.map.zoom,
-      pitch: this.options.map.pitch,
-      bearing: this.options.map.bearing,
+      container,
+      center,
+      zoom,
+      pitch,
+      bearing,
       minZoom: 2,
       maxZoom: 20,
-      hash: this.options.map.hash,
-      style: this.options.styles[this.options.style]
+      hash,
+      style: this.options.styles[this.options.defaultStyle]
     });
 
+    const { fullscreen, geolocation, navigation } = this.options.controls;
+
     this.addControls({
-      fullscreen: this.options.controls.fullscreen,
-      geolocation: this.options.controls.geolocation,
-      navigation: this.options.controls.navigation
+      fullscreen,
+      geolocation,
+      navigation
     });
 
     this.map.on("style.load", () => {
+      const colors = this.options.defaultMapColors[this.options.defaultStyle];
+
       this.colorizeDefaultMap({
-        colors: this.options.defaultMapColors,
-        style: this.options.style
+        colors
       });
     });
 
@@ -159,7 +178,7 @@ export default class Mapcraft {
   loadIcons(opt) {
     const options = Object.assign(
       {
-        icons: {}
+        icons: undefined
       },
       opt
     );
@@ -196,7 +215,7 @@ export default class Mapcraft {
   fetchGeoJson(opt) {
     const options = Object.assign(
       {
-        geoJsons: {}
+        geoJsons: undefined
       },
       opt
     );
@@ -234,10 +253,40 @@ export default class Mapcraft {
     });
   }
 
+  prepareSource(suffix) {
+    const prefix = this.options.sourcePrefix;
+    const source = prefix + suffix;
+
+    if (this.map.getSource(source)) this.map.removeSource(source);
+
+    return source;
+  }
+
+  prepareLayers(suffix) {
+    const prefixes = this.options.layersPrefixes;
+    const layers = {};
+
+    for (const featureKey in prefixes) {
+      const featureValue = prefixes[featureKey];
+
+      layers[featureKey] = {};
+
+      for (const typeKey in featureValue) {
+        const layer = featureValue[typeKey] + suffix;
+
+        layers[featureKey][typeKey] = layer;
+
+        if (this.map.getLayer(layer)) this.map.removeLayer(layer);
+      }
+    }
+
+    return layers;
+  }
+
   renderGeoJson(opt) {
     const options = Object.assign(
       {
-        geoJsons: {}
+        geoJsons: undefined
       },
       opt
     );
@@ -246,40 +295,22 @@ export default class Mapcraft {
       for (let key in options.geoJsons) {
         const value = options.geoJsons[key];
 
-        const source = key;
+        const source = this.prepareSource(key);
+        const layers = this.prepareLayers(key);
 
-        const layers = {
-          polygon: {
-            fill: "polygon-fill-" + key,
-            line: "polygon-line-" + key
-          },
-          polyline: {
-            line: "polyline-line-" + key,
-            symbol: "polyline-symbol-" + key
-          },
-          point: {
-            symbol: "point-symbol-" + key
-          }
-        };
+        const mustRender = this.options.layers;
 
-        if (this.map.getLayer(layers.polygon.fill))
-          this.map.removeLayer(layers.polygon.fill);
-        if (this.map.getLayer(layers.polygon.line))
-          this.map.removeLayer(layers.polygon.line);
-        if (this.map.getLayer(layers.polyline.line))
-          this.map.removeLayer(layers.polyline.line);
-        if (this.map.getLayer(layers.polyline.symbol))
-          this.map.removeLayer(layers.polyline.symbol);
-        if (this.map.getLayer(layers.point.symbol))
-          this.map.removeLayer(layers.point.symbol);
-        if (this.map.getSource(source)) this.map.removeSource(source);
+        const primaryColor = this.options.colors[this.options.defaultStyle]
+          .primary;
+        const secondaryColor = this.options.colors[this.options.defaultStyle]
+          .secondary;
 
         this.map.addSource(source, {
           type: "geojson",
           data: value
         });
 
-        if (this.options.layers.polygon.fill)
+        if (mustRender.polygon.fill)
           this.map.addLayer({
             id: layers.polygon.fill,
             type: "fill",
@@ -296,9 +327,9 @@ export default class Mapcraft {
                 ["exponential", 1],
                 ["zoom"],
                 1,
-                this.options.colors[this.options.style].primary,
+                primaryColor,
                 12,
-                this.options.colors[this.options.style].primary
+                primaryColor
               ],
               "fill-opacity": [
                 "interpolate",
@@ -316,7 +347,7 @@ export default class Mapcraft {
           layer: layers.polygon.fill
         });
 
-        if (this.options.layers.polygon.line)
+        if (mustRender.polygon.line)
           this.map.addLayer({
             id: layers.polygon.line,
             type: "line",
@@ -346,9 +377,9 @@ export default class Mapcraft {
                 ["exponential", 1],
                 ["zoom"],
                 1,
-                this.options.colors[this.options.style].secondary,
+                secondaryColor,
                 12,
-                this.options.colors[this.options.style].secondary
+                secondaryColor
               ],
               "line-opacity": [
                 "interpolate",
@@ -366,7 +397,7 @@ export default class Mapcraft {
           layer: layers.polygon.line
         });
 
-        if (this.options.layers.polyline.line)
+        if (mustRender.polyline.line)
           this.map.addLayer({
             id: layers.polyline.line,
             type: "line",
@@ -396,9 +427,9 @@ export default class Mapcraft {
                 ["exponential", 1],
                 ["zoom"],
                 1,
-                this.options.colors[this.options.style].secondary,
+                secondaryColor,
                 12,
-                this.options.colors[this.options.style].secondary
+                secondaryColor
               ],
               "line-opacity": [
                 "interpolate",
@@ -417,7 +448,7 @@ export default class Mapcraft {
           layer: layers.polyline.line
         });
 
-        if (this.options.layers.polyline.symbol)
+        if (mustRender.polyline.symbol)
           this.map.addLayer({
             id: layers.polyline.symbol,
             type: "symbol",
@@ -452,7 +483,7 @@ export default class Mapcraft {
           layer: layers.polyline.symbol
         });
 
-        if (this.options.layers.point.symbol)
+        if (mustRender.point.symbol)
           this.map.addLayer({
             id: layers.point.symbol,
             type: "symbol",
@@ -502,7 +533,7 @@ export default class Mapcraft {
   openPopup(opt) {
     const options = Object.assign(
       {
-        lnglat: "",
+        lnglat: undefined,
         html: ""
       },
       opt
@@ -525,8 +556,8 @@ export default class Mapcraft {
   switchLayer(opt) {
     const options = Object.assign(
       {
-        layer: "",
-        visibility: ""
+        layer: undefined,
+        visibility: undefined
       },
       opt
     );
@@ -537,7 +568,8 @@ export default class Mapcraft {
   fitBounds(opt) {
     const options = Object.assign(
       {
-        geoJson: {},
+        geoJson: undefined,
+        padding: 100,
         pitch: 0,
         bearing: 0
       },
@@ -549,7 +581,7 @@ export default class Mapcraft {
     const bbox = polygon.bbox();
 
     this.map.fitBounds(bbox, {
-      padding: 100,
+      padding: options.padding,
       pitch: options.pitch,
       bearing: options.bearing
     });
@@ -558,7 +590,7 @@ export default class Mapcraft {
   makeLayerInteractive(opt) {
     const options = Object.assign(
       {
-        layer: ""
+        layer: undefined
       },
       opt
     );
@@ -609,8 +641,7 @@ export default class Mapcraft {
   colorizeDefaultMap(opt) {
     const options = Object.assign(
       {
-        colors: {},
-        style: ""
+        colors: undefined
       },
       opt
     );
@@ -618,22 +649,25 @@ export default class Mapcraft {
     this.map.setPaintProperty(
       "background",
       "background-color",
-      options.colors[options.style].background
+      options.colors.background
     );
+
     this.map.setPaintProperty(
       "country-fills",
       "fill-color",
-      options.colors[options.style].fill
+      options.colors.fill
     );
+
     this.map.setPaintProperty(
       "country-lines",
       "line-color",
-      options.colors[options.style].line
+      options.colors.line
     );
+
     this.map.setPaintProperty(
       "country-symbols",
       "text-color",
-      options.colors[options.style].text
+      options.colors.text
     );
   }
 }

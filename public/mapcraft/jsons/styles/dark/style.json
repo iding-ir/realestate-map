@@ -1,7 +1,7 @@
 {
   "version": 8,
-  "name": "Light Style",
-  "id": "mads-light-style",
+  "name": "Dark Style",
+  "id": "mads-dark-style",
   "owner": "aydinghane",
   "created": "2019-06-28T14:49:52.651Z",
   "modified": "2019-06-28T14:49:52.651Z",
@@ -10,27 +10,27 @@
   "metadata": {
     "mapbox:autocomposite": true,
     "mapbox:type": "default",
-    "mapbox:origin": "mads-light-style",
+    "mapbox:origin": "mads-dark-style",
     "mapbox:groups": {}
   },
   "sources": {
     "country-polygons": {
       "type": "geojson",
-      "data": "/assets/jsons/country-polygons.json"
+      "data": "/mapcraft/jsons/country-polygons.json"
     },
     "country-points": {
       "type": "geojson",
-      "data": "/assets/jsons/country-points.json"
+      "data": "/mapcraft/jsons/country-points.json"
     }
   },
   "sprite": "",
-  "glyphs": "/assets/glyphs/{fontstack}/{range}.pbf",
+  "glyphs": "/mapcraft/glyphs/{fontstack}/{range}.pbf",
   "layers": [{
     "id": "background",
     "type": "background",
     "paint": {
       "background-color": ["interpolate", ["exponential", 1],
-        ["zoom"], 5, "#0D47A1", 10, "#0D47A1"
+        ["zoom"], 5, "#101518", 10, "#101518"
       ]
     }
   }, {
@@ -39,7 +39,7 @@
     "type": "fill",
     "layout": {},
     "paint": {
-      "fill-color": "#EFEBE9",
+      "fill-color": "#263238",
       "fill-opacity": 1
     }
   }, {
@@ -48,7 +48,7 @@
     "type": "line",
     "layout": {},
     "paint": {
-      "line-color": "#3E2723",
+      "line-color": "#E1F5FE",
       "line-opacity": 0.3
     }
   }, {
@@ -118,7 +118,7 @@
         2, 1.0,
         6, 0.5
       ],
-      "text-color": "#3E2723"
+      "text-color": "#E1F5FE"
     }
   }]
 }
