@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import $ from "jquery";
-import Mapcraft from "./mapcraft";
+import Mapcraft from "../mapcraft";
 import Search from "./search";
 
 class App extends Component {
