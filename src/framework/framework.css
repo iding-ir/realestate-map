@@ -790,6 +790,7 @@ h6 {
   box-shadow: var(--box-shadow-md);
   transform: translateX(-100%);
   transition: var(--transition-md);
+  z-index: 10000;
 }
 
 @media only screen and (min-width: 600px) {

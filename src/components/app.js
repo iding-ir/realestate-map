@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import $ from "jquery";
 import Mapcraft from "../mapcraft";
 import Search from "./search";
+import Tour from "./tour";
 
 class App extends Component {
   state = {
@@ -31,7 +32,12 @@ class App extends Component {
       from: 10000,
       to: 100000
     },
-    places: {}
+    places: {
+      type: "FeatureCollection",
+      features: []
+    },
+    tourActive: false,
+    tourIndex: 0
   };
 
   componentDidMount() {
@@ -52,9 +58,21 @@ class App extends Component {
             onChangeArea={this.handleChangeArea}
             onChangeRent={this.handleChangeRent}
             onChangeDeposit={this.handleChangeDeposit}
+            onChangeTour={this.handleChangeTour}
             getPlacesCount={this.getPlacesCount}
+            disableTour={this.state.places.features.length === 0}
           />
         </div>
+
+        <Tour
+          tourActive={this.state.tourActive}
+          disableRestart={this.state.tourIndex <= 0}
+          disableNext={
+            this.state.tourIndex >= this.state.places.features.length - 1
+          }
+          disablePrev={this.state.tourIndex <= 0}
+          onChangeTour={this.handleChangeTour}
+        />
       </div>
     );
   }
@@ -168,6 +186,7 @@ class App extends Component {
 
     this.setState({ types });
 
+    this.handleChangeTour("end-tour");
     this.handleFilter();
     this.handleGeoJson();
   };
@@ -182,6 +201,7 @@ class App extends Component {
 
     this.setState({ rooms });
 
+    this.handleChangeTour("end-tour");
     this.handleFilter();
     this.handleGeoJson();
   };
@@ -194,6 +214,7 @@ class App extends Component {
 
     this.setState({ areas });
 
+    this.handleChangeTour("end-tour");
     this.handleFilter();
     this.handleGeoJson();
   };
@@ -206,6 +227,7 @@ class App extends Component {
 
     this.setState({ rents });
 
+    this.handleChangeTour("end-tour");
     this.handleFilter();
     this.handleGeoJson();
   };
@@ -218,8 +240,54 @@ class App extends Component {
 
     this.setState({ deposits });
 
+    this.handleChangeTour("end-tour");
     this.handleFilter();
     this.handleGeoJson();
+  };
+
+  handleChangeTour = action => {
+    let features = this.state.places.features;
+    let lastIndex = features.length - 1;
+    let tourActive = this.state.tourActive;
+    let tourIndex = this.state.tourIndex;
+
+    $(".sc-slide").removeClass("sc-is-open");
+
+    if (action === "start-tour") {
+      tourActive = true;
+
+      tourIndex = 0;
+    }
+
+    if (action === "end-tour") {
+      tourActive = false;
+
+      tourIndex = 0;
+
+      $(".sc-slide").addClass("sc-is-open");
+    }
+
+    if (action === "restart") tourIndex = 0;
+
+    if (action === "next" && tourIndex < lastIndex) tourIndex += 1;
+
+    if (action === "prev" && tourIndex > 0) tourIndex -= 1;
+
+    if (tourActive) {
+      let feature = features[tourIndex];
+
+      let lnglat = {
+        lng: feature.geometry.coordinates[0],
+        lat: feature.geometry.coordinates[1]
+      };
+
+      this.mapcraft.flyTo({
+        lnglat: lnglat,
+        zoom: 12
+      });
+    }
+
+    this.setState({ tourActive, tourIndex });
   };
 
   InitializeMap = () => {
@@ -259,6 +327,7 @@ class App extends Component {
       this.mapcraft.map.on("click", "point-symbol-places", event => {
         let {
           title,
+          image,
           description,
           type,
           rooms,
@@ -276,6 +345,8 @@ class App extends Component {
           <div class="sc-card-header"><h5>${title}</h5></div>
             <div class="sc-card-body">
               <table class="sc-table">
+                <img src="${image}" />
+
                 <p>${description}</p>
 
                 <tbody>

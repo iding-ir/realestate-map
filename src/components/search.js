@@ -13,7 +13,9 @@ class Sreach extends Component {
       onChangeArea,
       onChangeRent,
       onChangeDeposit,
-      getPlacesCount
+      onChangeTour,
+      getPlacesCount,
+      disableTour
     } = this.props;
 
     return (
@@ -132,7 +134,12 @@ class Sreach extends Component {
 
           <div className="sc-form-group sc-grid-1">
             <div className="sc-form-button sc-stretched">
-              <button>
+              <button
+                disabled={disableTour}
+                onClick={() => {
+                  onChangeTour("start-tour");
+                }}
+              >
                 <i className="sc-icon-search"></i>
 
                 <span>Tour through the results</span>
