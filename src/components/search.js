@@ -144,7 +144,7 @@ class Sreach extends Component {
                   onChangeTour("start-tour");
                 }}
               >
-                <i className="sc-icon-search"></i>
+                <i className="sc-icon-route"></i>
 
                 <span>Tour through the results</span>
               </button>

@@ -4,6 +4,7 @@ import "./framework/vars.css";
 import "./framework/reset.css";
 import "./framework/fonts.css";
 import "./framework/framework.css";
+import "./framework/icons.css";
 import "./index.css";
 import "./hacks.css";
 import App from "./components/app";

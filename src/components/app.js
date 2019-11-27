@@ -7,12 +7,12 @@ import Tour from "./tour";
 class App extends Component {
   state = {
     types: [
-      { slug: "apartment", name: "Apartment", checked: true },
-      { slug: "commercial", name: "Commercial", checked: true },
-      { slug: "studio", name: "Studio", checked: true },
-      { slug: "dorm", name: "Dorm", checked: true },
       { slug: "house", name: "House", checked: true },
-      { slug: "communal", name: "Communal", checked: true }
+      { slug: "apartment", name: "Apartment", checked: true },
+      { slug: "communal", name: "Communal", checked: true },
+      { slug: "dorm", name: "Dorm", checked: true },
+      { slug: "commercial", name: "Commercial", checked: true },
+      { slug: "warehouse", name: "Warehouse", checked: true }
     ],
     rooms: [
       { slug: "one", name: "One", checked: false },
@@ -314,12 +314,12 @@ class App extends Component {
         hash: false
       },
       icons: {
-        apartment: "./assets/images/icon-apartment.png",
-        commercial: "./assets/images/icon-commercial.png",
-        studio: "./assets/images/icon-studio.png",
-        dorm: "./assets/images/icon-dorm.png",
         house: "./assets/images/icon-house.png",
-        communal: "./assets/images/icon-communal.png"
+        apartment: "./assets/images/icon-apartment.png",
+        communal: "./assets/images/icon-communal.png",
+        dorm: "./assets/images/icon-dorm.png",
+        commercial: "./assets/images/icon-commercial.png",
+        warehouse: "./assets/images/icon-warehouse.png"
       },
       geoJsons: {
         places: "./data/places.json"
