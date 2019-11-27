@@ -7,7 +7,11 @@ class Sreach extends Component {
   state = {};
   render() {
     let {
-      state,
+      types,
+      rooms,
+      areas,
+      rents,
+      deposits,
       onChangeType,
       onChangeRoom,
       onChangeArea,
@@ -34,7 +38,7 @@ class Sreach extends Component {
             <h6>Type</h6>
 
             <div className="sc-form-group sc-grid-2">
-              {state.types.map((type, index) => {
+              {types.map((type, index) => {
                 return (
                   <div className="sc-form-checkbox" key={index}>
                     <input
@@ -61,7 +65,7 @@ class Sreach extends Component {
             <h6>Rooms</h6>
 
             <div className="sc-form-group sc-grid-2">
-              {state.rooms.map((room, index) => {
+              {rooms.map((room, index) => {
                 return (
                   <div className="sc-form-radio" key={index}>
                     <input
@@ -92,7 +96,7 @@ class Sreach extends Component {
                 maxValue={200}
                 minValue={20}
                 step={10}
-                value={{ min: state.areas.from, max: state.areas.to }}
+                value={{ min: areas.from, max: areas.to }}
                 onChange={value => {
                   onChangeArea(value);
                 }}
@@ -106,7 +110,7 @@ class Sreach extends Component {
                 maxValue={50000}
                 minValue={3000}
                 step={1000}
-                value={{ min: state.rents.from, max: state.rents.to }}
+                value={{ min: rents.from, max: rents.to }}
                 onChange={value => {
                   onChangeRent(value);
                 }}
@@ -120,7 +124,7 @@ class Sreach extends Component {
                 maxValue={200000}
                 minValue={10000}
                 step={1000}
-                value={{ min: state.deposits.from, max: state.deposits.to }}
+                value={{ min: deposits.from, max: deposits.to }}
                 onChange={value => {
                   onChangeDeposit(value);
                 }}

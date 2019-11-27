@@ -7,63 +7,51 @@ class Tour extends Component {
 
     return (
       <React.Fragment>
-        <div
-          className={
-            "app-tour-controls sc-grid-4" + this.getTourAdditionalClasses()
-          }
-        >
-          <div className="sc-form-button sc-stretched">
-            <button
-              onClick={() => {
-                onChangeTour("prev");
-              }}
-              disabled={disablePrev}
-            >
-              Prev
-            </button>
-          </div>
+        <div className="sc-form-button sc-stretched">
+          <button
+            disabled={disablePrev}
+            onClick={() => {
+              onChangeTour("prev");
+            }}
+          >
+            Prev
+          </button>
+        </div>
 
-          <div className="sc-form-button sc-stretched">
-            <button
-              onClick={() => {
-                onChangeTour("restart");
-              }}
-              disabled={disableRestart}
-            >
-              Restart
-            </button>
-          </div>
+        <div className="sc-form-button sc-stretched">
+          <button
+            disabled={disableRestart}
+            onClick={() => {
+              onChangeTour("restart");
+            }}
+          >
+            Restart
+          </button>
+        </div>
 
-          <div className="sc-form-button sc-stretched">
-            <button
-              onClick={() => {
-                onChangeTour("end-tour");
-              }}
-            >
-              End
-            </button>
-          </div>
+        <div className="sc-form-button sc-stretched">
+          <button
+            onClick={() => {
+              onChangeTour("end-tour");
+            }}
+          >
+            End
+          </button>
+        </div>
 
-          <div className="sc-form-button sc-stretched">
-            <button
-              onClick={() => {
-                onChangeTour("next");
-              }}
-              disabled={disableNext}
-            >
-              Next
-            </button>
-          </div>
+        <div className="sc-form-button sc-stretched">
+          <button
+            disabled={disableNext}
+            onClick={() => {
+              onChangeTour("next");
+            }}
+          >
+            Next
+          </button>
         </div>
       </React.Fragment>
     );
   }
-
-  getTourAdditionalClasses = () => {
-    let { tourActive } = this.props;
-
-    return tourActive ? " is-visible" : "";
-  };
 }
 
 export default Tour;

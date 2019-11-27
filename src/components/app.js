@@ -45,14 +45,20 @@ class App extends Component {
   }
 
   render() {
+    let numberOFPlaces = this.state.places.features.length;
+    let lastIndex = numberOFPlaces - 1;
+
     return (
       <div className="app">
         <div id="app-map"></div>
 
         <div className="sc-slide">
           <Search
-            state={this.state}
-            onFilter={this.handleFilter}
+            types={this.state.types}
+            rooms={this.state.rooms}
+            areas={this.state.areas}
+            rents={this.state.rents}
+            deposits={this.state.deposits}
             onChangeType={this.handleChangeType}
             onChangeRoom={this.handleChangeRoom}
             onChangeArea={this.handleChangeArea}
@@ -60,27 +66,34 @@ class App extends Component {
             onChangeDeposit={this.handleChangeDeposit}
             onChangeTour={this.handleChangeTour}
             getPlacesCount={this.getPlacesCount}
-            disableTour={this.state.places.features.length === 0}
+            disableTour={numberOFPlaces === 0}
           />
         </div>
 
-        <Tour
-          tourActive={this.state.tourActive}
-          disableRestart={this.state.tourIndex <= 0}
-          disableNext={
-            this.state.tourIndex >= this.state.places.features.length - 1
-          }
-          disablePrev={this.state.tourIndex <= 0}
-          onChangeTour={this.handleChangeTour}
-        />
+        <div className={this.getTourAdditionalClasses()}>
+          <Tour
+            disableRestart={this.state.tourIndex <= 0}
+            disableNext={this.state.tourIndex >= lastIndex}
+            disablePrev={this.state.tourIndex <= 0}
+            onChangeTour={this.handleChangeTour}
+          />
+        </div>
       </div>
     );
   }
 
+  getTourAdditionalClasses = () => {
+    let classes = "app-tour-controls sc-grid-4";
+
+    if (this.state.tourActive) classes += " is-visible";
+
+    return classes;
+  };
+
   getPlacesCount = () => {
     let features = this.state.places.features;
 
-    return features && features.length ? features.length : "No";
+    return features.length ? features.length : "No";
   };
 
   handleFilter = () => {
