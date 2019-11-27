@@ -298,6 +298,8 @@ class App extends Component {
         lnglat: lnglat,
         zoom: 12
       });
+
+      this.openPopup(feature.properties, lnglat);
     }
 
     this.setState({ tourActive, tourIndex });
@@ -338,65 +340,71 @@ class App extends Component {
       }, 4000);
 
       this.mapcraft.map.on("click", "point-symbol-places", event => {
-        let {
-          title,
-          image,
-          description,
-          type,
-          rooms,
-          area,
-          rent,
-          deposit
-        } = event.features[0].properties;
+        let properties = event.features[0].properties;
         let coordinates = event.features[0].geometry.coordinates.slice();
 
         while (Math.abs(event.lngLat.lng - coordinates[0]) > 180) {
           coordinates[0] += event.lngLat.lng > coordinates[0] ? 360 : -360;
         }
 
-        let html = `<div class="sc-card sc-borderless">
-          <div class="sc-card-header"><h5>${title}</h5></div>
-            <div class="sc-card-body">
-              <table class="sc-table">
-                <img src="${image}" />
-
-                <p>${description}</p>
-
-                <tbody>
-                  <tr>
-                    <td>Type</td>
-                    <td>${type}</td>
-                  </tr>
-
-                  <tr>
-                    <td>Rooms</td>
-                    <td>${rooms}</td>
-                  </tr>
-
-                  <tr>
-                    <td>Area</td>
-                    <td>${area}</td>
-                  </tr>
-
-                  <tr>
-                    <td>Rent</td>
-                    <td>${rent}</td>
-                  </tr>
-
-                  <tr>
-                    <td>Deposit</td>
-                    <td>${deposit}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>`;
-
-        this.mapcraft.openPopup({
-          lnglat: coordinates,
-          html: html
-        });
+        this.openPopup(properties, coordinates);
       });
+    });
+  };
+
+  openPopup = (properties, lnglat) => {
+    let {
+      title,
+      image,
+      description,
+      type,
+      rooms,
+      area,
+      rent,
+      deposit
+    } = properties;
+
+    let html = `<div class="sc-card sc-borderless">
+      <div class="sc-card-header"><h5>${title}</h5></div>
+        <div class="sc-card-body">
+          <table class="sc-table">
+            <img src="${image}" />
+
+            <p>${description}</p>
+
+            <tbody>
+              <tr>
+                <td>Type</td>
+                <td>${type}</td>
+              </tr>
+
+              <tr>
+                <td>Rooms</td>
+                <td>${rooms}</td>
+              </tr>
+
+              <tr>
+                <td>Area</td>
+                <td>${area}</td>
+              </tr>
+
+              <tr>
+                <td>Rent</td>
+                <td>${rent}</td>
+              </tr>
+
+              <tr>
+                <td>Deposit</td>
+                <td>${deposit}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>`;
+
+    this.mapcraft.openPopup({
+      lnglat: lnglat,
+      html: html
     });
   };
 }
