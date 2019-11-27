@@ -1,0 +1,114 @@
+.input-range {
+  position: relative;
+  left: calc(var(--icon-sm) / 2);
+  width: calc(100% - var(--icon-sm));
+  height: var(--icon-sm);
+  margin: var(--icon-sm) 0;
+}
+
+.input-range__slider {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: var(--icon-sm);
+  height: var(--icon-sm);
+  margin-left: calc(-0.5 * var(--icon-sm));
+  margin-top: calc(-0.5 * (var(--icon-sm) + var(--border-thickness)));
+  background: var(--color-lighter);
+  border: var(--border-thickness) solid var(--color-primary-light);
+  border-radius: 100%;
+  box-shadow: var(--box-shadow-md);
+  cursor: pointer;
+  transition: all var(--transition-sm);
+  appearance: none;
+  outline: none;
+}
+
+.input-range__slider:active {
+  background: var(--color-grey-sm);
+  border-color: var(--color-seocndary-light);
+  box-shadow: var(--box-shadow-lg);
+}
+
+.input-range__slider:focus {
+  background: var(--color-grey-sm);
+  border-color: var(--color-seocndary-light);
+  box-shadow: var(--box-shadow-lg);
+}
+
+.input-range__slider:hover {
+  background: var(--color-grey-sm);
+  border-color: var(--color-seocndary-light);
+  box-shadow: var(--box-shadow-lg);
+}
+
+.input-range--disabled .input-range__slider {
+  background: var(--fade-grey-sm);
+  border-color: var(--fade-grey-md);
+}
+
+.input-range__slider-container {
+  /* transition: left 0.3s ease-out; */
+}
+
+.input-range__label {
+  color: var(--color-dark);
+  font-size: 1rem;
+  transform: translateZ(0);
+  white-space: nowrap;
+}
+
+.input-range__label--min,
+.input-range__label--max {
+  position: absolute;
+  bottom: calc(-1 * var(--icon-sm));
+}
+
+.input-range__label--min {
+  left: 0;
+}
+
+.input-range__label--max {
+  right: 0;
+}
+
+.input-range__label--value {
+  position: absolute;
+  top: calc(-1.5 * var(--icon-sm));
+  background-color: var(--color-lighter);
+}
+
+.input-range__slider-container:nth-of-type(1) .input-range__label--value {
+  transform: translateX(0);
+}
+
+.input-range__slider-container:nth-of-type(2) .input-range__label--value {
+  transform: translateX(-100%);
+}
+
+.input-range__track {
+  display: block;
+  position: relative;
+  height: var(--border-thickness);
+  background: var(--color-primary-light);
+  transition: all var(--transition-sm);
+  cursor: pointer;
+}
+
+.input-range--disabled .input-range__track {
+  background: var(--color-fade-grey-md);
+}
+
+.input-range__track--background {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-top: calc(-0.5 * var(--border-thickness));
+}
+
+.input-range__track--active {
+  background: var(--color-secondary-light);
+}
+
+/*# sourceMappingURL=index.css.map */

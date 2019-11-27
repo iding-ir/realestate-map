@@ -38,7 +38,7 @@ html {
 body {
   position: relative;
   color: var(--color-dark);
-  background-color: var(--color-light);
+  background-color: var(--color-lighter);
 }
 
 body * {
@@ -301,9 +301,19 @@ h6 {
   border-radius: var(--border-radius);
 }
 
+.sc-form-radio input:not(:disabled) ~ label:hover i,
+.sc-form-checkbox input:not(:disabled) ~ label:hover i {
+  background-color: var(--color-light);
+}
+
 .sc-form-radio input:disabled ~ label i,
 .sc-form-checkbox input:disabled ~ label i {
   border-color: var(--fade-grey-md);
+}
+
+.sc-form-radio input:disabled ~ label:hover i,
+.sc-form-checkbox input:disabled ~ label:hover i {
+  background-color: var(--color-transparent);
 }
 
 .sc-form-radio input ~ label i::before,
@@ -688,7 +698,7 @@ h6 {
 }
 
 .sc-table caption {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   text-align: left;
   padding: var(--padding-md) var(--padding-sm);
 }
@@ -754,16 +764,6 @@ h6 {
 .sc-card .sc-card-header {
   padding: var(--padding-md) 0;
   border-bottom: var(--border-thickness) solid var(--fade-dark-md);
-}
-
-.sc-card h1,
-.sc-card h2,
-.sc-card h3,
-.sc-card h4,
-.sc-card h5,
-.sc-card h6 {
-  margin: 0;
-  line-height: var(--icon-lg);
 }
 
 .sc-card .sc-card-body {

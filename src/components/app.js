@@ -20,16 +20,16 @@ class App extends Component {
       { slug: "any", name: "Any", checked: true }
     ],
     areas: {
-      from: 20,
-      to: 200
+      from: 30,
+      to: 150
     },
     rents: {
-      from: 3000,
-      to: 50000
+      from: 5000,
+      to: 20000
     },
     deposits: {
       from: 10000,
-      to: 200000
+      to: 100000
     },
     places: {}
   };
@@ -186,11 +186,11 @@ class App extends Component {
     this.handleGeoJson();
   };
 
-  handleChangeArea = (event, extent) => {
-    let value = parseInt($(event.target).val());
+  handleChangeArea = value => {
     let areas = { ...this.state.areas };
 
-    areas[extent] = value;
+    areas.from = value.min;
+    areas.to = value.max;
 
     this.setState({ areas });
 
@@ -198,11 +198,11 @@ class App extends Component {
     this.handleGeoJson();
   };
 
-  handleChangeRent = (event, extent) => {
-    let value = parseInt($(event.target).val());
+  handleChangeRent = value => {
     let rents = { ...this.state.rents };
 
-    rents[extent] = value;
+    rents.from = value.min;
+    rents.to = value.max;
 
     this.setState({ rents });
 
@@ -210,11 +210,11 @@ class App extends Component {
     this.handleGeoJson();
   };
 
-  handleChangeDeposit = (event, extent) => {
-    let value = parseInt($(event.target).val());
+  handleChangeDeposit = value => {
     let deposits = { ...this.state.deposits };
 
-    deposits[extent] = value;
+    deposits.from = value.min;
+    deposits.to = value.max;
 
     this.setState({ deposits });
 

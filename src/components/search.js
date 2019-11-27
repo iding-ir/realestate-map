@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import $ from "jquery";
+import InputRange from "react-input-range";
+import "../input-range.css";
 
 class Sreach extends Component {
   state = {};
@@ -83,116 +85,44 @@ class Sreach extends Component {
 
             <h6>Area</h6>
 
-            <div className="sc-form-group sc-grid-2">
-              <div className="sc-form-range">
-                <label htmlFor="app-area-from">{state.areas.from}</label>
-
-                <input
-                  type="range"
-                  min="30"
-                  max="150"
-                  step="10"
-                  value={state.areas.from}
-                  id="app-area-from"
-                  name="app-area-from"
-                  onChange={event => {
-                    onChangeArea(event, "from");
-                  }}
-                />
-              </div>
-
-              <div className="sc-form-range">
-                <label htmlFor="app-area-to">{state.areas.to}</label>
-
-                <input
-                  type="range"
-                  min="30"
-                  max="150"
-                  step="10"
-                  value={state.areas.to}
-                  id="app-area-to"
-                  name="app-area-to"
-                  onChange={event => {
-                    onChangeArea(event, "to");
-                  }}
-                />
-              </div>
+            <div className="sc-form-group sc-grid-1">
+              <InputRange
+                maxValue={200}
+                minValue={20}
+                step={10}
+                value={{ min: state.areas.from, max: state.areas.to }}
+                onChange={value => {
+                  onChangeArea(value);
+                }}
+              />
             </div>
 
             <h6>Rent</h6>
 
-            <div className="sc-form-group sc-grid-2">
-              <div className="sc-form-range">
-                <label htmlFor="app-rent-from">{state.rents.from}</label>
-
-                <input
-                  type="range"
-                  min="3000"
-                  max="50000"
-                  step="1000"
-                  value={state.rents.from}
-                  id="app-rent-from"
-                  name="app-rent-from"
-                  onChange={event => {
-                    onChangeRent(event, "from");
-                  }}
-                />
-              </div>
-
-              <div className="sc-form-range">
-                <label htmlFor="app-rent-to">{state.rents.to}</label>
-
-                <input
-                  type="range"
-                  min="3000"
-                  max="50000"
-                  step="1000"
-                  value={state.rents.to}
-                  id="app-rent-to"
-                  name="app-rent-to"
-                  onChange={event => {
-                    onChangeRent(event, "to");
-                  }}
-                />
-              </div>
+            <div className="sc-form-group sc-grid-1">
+              <InputRange
+                maxValue={50000}
+                minValue={3000}
+                step={1000}
+                value={{ min: state.rents.from, max: state.rents.to }}
+                onChange={value => {
+                  onChangeRent(value);
+                }}
+              />
             </div>
 
             <h6>Deposit</h6>
 
-            <div className="sc-form-group sc-grid-2">
-              <div className="sc-form-range">
-                <label htmlFor="app-deposit-from">{state.deposits.from}</label>
-
-                <input
-                  type="range"
-                  min="10000"
-                  max="200000"
-                  step="1000"
-                  value={state.deposits.from}
-                  id="app-deposit-from"
-                  name="app-deposit-from"
-                  onChange={event => {
-                    onChangeDeposit(event, "from");
-                  }}
-                />
-              </div>
-
-              <div className="sc-form-range">
-                <label htmlFor="app-deposit-to">{state.deposits.to}</label>
-
-                <input
-                  type="range"
-                  min="10000"
-                  max="200000"
-                  step="1000"
-                  value={state.deposits.to}
-                  id="app-deposit-to"
-                  name="app-deposit-to"
-                  onChange={event => {
-                    onChangeDeposit(event, "to");
-                  }}
-                />
-              </div>
+            <div className="sc-form-group sc-grid-1">
+              <InputRange
+                maxValue={200000}
+                minValue={10000}
+                step={1000}
+                value={{ min: state.deposits.from, max: state.deposits.to }}
+                onChange={value => {
+                  onChangeDeposit(value);
+                }}
+              />
             </div>
           </form>
         </div>
