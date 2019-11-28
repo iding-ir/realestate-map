@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./app.css";
 import $ from "jquery";
 import Mapcraft from "../mapcraft";
 import Search from "./search";
@@ -300,6 +301,8 @@ class App extends Component {
       tourActive = false;
 
       tourIndex = 0;
+
+      this.mapcraft.closePopup();
 
       $(".sc-slide").addClass("sc-is-open");
     }

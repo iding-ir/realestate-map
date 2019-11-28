@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./page.css";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 

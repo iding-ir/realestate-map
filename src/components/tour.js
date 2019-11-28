@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./tour.css";
 
 class Tour extends Component {
   state = {};
