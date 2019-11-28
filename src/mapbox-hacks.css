@@ -37,31 +37,31 @@
 
 /* ------------- Control ------------- */
 
-.mapboxgl-ctrl {
+.mapboxgl-ctrl-group {
   border-radius: var(--border-radius) !important;
   border: var(--border-thickness) solid var(--color-primary-light) !important;
   box-shadow: var(--box-shadow-md) !important;
 }
 
-.mapboxgl-ctrl-top-left .mapboxgl-ctrl {
+.mapboxgl-ctrl-top-left .mapboxgl-ctrl-group {
   margin: var(--padding-md) 0 0 var(--padding-md) !important;
 }
 
-.mapboxgl-ctrl-top-right .mapboxgl-ctrl {
+.mapboxgl-ctrl-top-right .mapboxgl-ctrl-group {
   margin: var(--padding-md) var(--padding-md) 0 0 !important;
 }
 
-.mapboxgl-ctrl-bottom-left .mapboxgl-ctrl {
+.mapboxgl-ctrl-bottom-left .mapboxgl-ctrl-group {
   margin: 0 0 var(--padding-md) var(--padding-md) !important;
 }
 
-.mapboxgl-ctrl-bottom-right .mapboxgl-ctrl {
+.mapboxgl-ctrl-bottom-right .mapboxgl-ctrl-group {
   margin: 0 var(--padding-md) var(--padding-md) 0 !important;
 }
 
 /* ------------- Control buttons ------------- */
 
-.mapboxgl-ctrl {
+.mapboxgl-ctrl-group {
   overflow: hidden !important;
 }
 
@@ -92,6 +92,14 @@
 .mapboxgl-ctrl-icon.mapboxgl-ctrl-zoom-out:hover,
 .mapboxgl-ctrl-icon.mapboxgl-ctrl-compass:hover {
   background-color: var(--color-light) !important;
+}
+
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-geolocate:focus,
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-fulscreen:focus,
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-zoom-in:focus,
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-zoom-out:focus,
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-compass:focus {
+  box-shadow: none !important;
 }
 
 .mapboxgl-ctrl-icon.mapboxgl-ctrl-geolocate::before,
