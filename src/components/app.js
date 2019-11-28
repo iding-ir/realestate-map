@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./app.css";
-import $ from "jquery";
 import Mapcraft from "../mapcraft";
 import Search from "./search";
 import Tour from "./tour";
@@ -36,6 +35,7 @@ class App extends Component {
       type: "FeatureCollection",
       features: []
     },
+    slideOpen: false,
     tourActive: false,
     tourIndex: 0,
     pageVisible: false,
@@ -54,13 +54,15 @@ class App extends Component {
       <div className="app">
         <div id="app-map"></div>
 
-        <div className="sc-slide">
+        <div className={this.getSlideClasses()}>
           <Search
             types={this.state.types}
             rooms={this.state.rooms}
             areas={this.state.areas}
             rents={this.state.rents}
             deposits={this.state.deposits}
+            slideOpen={this.state.slideOpen}
+            onChangeSlide={this.handleChangeSlide}
             onChangeType={this.handleChangeType}
             onChangeRoom={this.handleChangeRoom}
             onChangeArea={this.handleChangeArea}
@@ -84,19 +86,21 @@ class App extends Component {
         <div
           className={this.getPageOverlayClasses()}
           onClick={() => {
-            this.handleClosePage();
+            this.handleChangePage(false);
           }}
         >
-          <Page page={this.state.page} onClosePage={this.handleClosePage} />
+          <Page page={this.state.page} onChangePage={this.handleChangePage} />
         </div>
       </div>
     );
   }
 
-  handleClosePage = () => {
-    let pageVisible = false;
-
+  handleChangePage = pageVisible => {
     this.setState({ pageVisible });
+  };
+
+  handleChangeSlide = slideOpen => {
+    this.setState({ slideOpen });
   };
 
   getTourControlsClasses = () => {
@@ -111,6 +115,14 @@ class App extends Component {
     let classes = "app-page-overlay";
 
     if (this.state.pageVisible) classes += " is-visible";
+
+    return classes;
+  };
+
+  getSlideClasses = () => {
+    let classes = "sc-slide";
+
+    if (this.state.slideOpen) classes += " sc-is-open";
 
     return classes;
   };
@@ -215,9 +227,9 @@ class App extends Component {
   };
 
   handleChangeType = event => {
-    let slug = $(event.target).attr("data-type");
+    let slug = event.target.getAttribute("data-type");
     let types = [...this.state.types].map(type => {
-      if (type.slug === slug) type.checked = $(event.target).is(":checked");
+      if (type.slug === slug) type.checked = event.target.checked;
 
       return type;
     });
@@ -230,7 +242,7 @@ class App extends Component {
   };
 
   handleChangeRoom = event => {
-    let slug = $(event.target).attr("data-room");
+    let slug = event.target.getAttribute("data-room");
     let rooms = [...this.state.rooms].map(room => {
       room.checked = room.slug === slug ? true : false;
 
@@ -289,7 +301,7 @@ class App extends Component {
     let tourActive = this.state.tourActive;
     let tourIndex = this.state.tourIndex;
 
-    $(".sc-slide").removeClass("sc-is-open");
+    this.handleChangeSlide(false);
 
     if (action === "start-tour") {
       tourActive = true;
@@ -304,7 +316,7 @@ class App extends Component {
 
       this.mapcraft.closePopup();
 
-      $(".sc-slide").addClass("sc-is-open");
+      this.handleChangeSlide(true);
     }
 
     if (action === "restart") tourIndex = 0;
@@ -371,7 +383,7 @@ class App extends Component {
       }, 2500);
 
       setTimeout(() => {
-        $(".sc-slide").addClass("sc-is-open");
+        this.handleChangeSlide(true);
       }, 4000);
 
       this.mapcraft.map.on("click", "point-symbol-places", event => {
@@ -407,7 +419,7 @@ class App extends Component {
     } = properties;
 
     let html = `<div class="sc-card sc-borderless">
-      <div class="sc-card-header"><h5>${title}</h5></div>
+      <div class="sc-card-header"><h5 class="app-page-trigger">${title}</h5></div>
         <div class="sc-card-body">
           <div>
             <img src="${images[0].thumbnail}" class="app-page-trigger" />
@@ -453,11 +465,12 @@ class App extends Component {
       html: html
     });
 
-    $(".app-page-trigger").on("click", () => {
-      let pageVisible = true;
-      let page = properties;
+    document.querySelectorAll(".app-page-trigger").forEach(element => {
+      element.addEventListener("click", () => {
+        this.handleChangePage(true);
 
-      this.setState({ pageVisible, page });
+        this.setState({ page: properties });
+      });
     });
   };
 }

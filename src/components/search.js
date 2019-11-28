@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import $ from "jquery";
 import InputRange from "react-input-range";
 
 class Sreach extends Component {
@@ -11,6 +10,8 @@ class Sreach extends Component {
       areas,
       rents,
       deposits,
+      slideOpen,
+      onChangeSlide,
       onChangeType,
       onChangeRoom,
       onChangeArea,
@@ -28,7 +29,9 @@ class Sreach extends Component {
 
           <i
             className="sc-icon-menu sc-slide-toggle"
-            onClick={this.handleToggleSidebar}
+            onClick={() => {
+              onChangeSlide(!slideOpen);
+            }}
           ></i>
         </header>
 
@@ -153,10 +156,6 @@ class Sreach extends Component {
       </React.Fragment>
     );
   }
-
-  handleToggleSidebar = () => {
-    $(".sc-slide").toggleClass("sc-is-open");
-  };
 }
 
 export default Sreach;

@@ -6,7 +6,7 @@ import "react-image-gallery/styles/css/image-gallery.css";
 class Page extends Component {
   state = {};
   render() {
-    let { page, onClosePage } = this.props;
+    let { page, onChangePage } = this.props;
 
     return (
       <div
@@ -22,7 +22,7 @@ class Page extends Component {
             <i
               className="sc-icon-cross sc-lg app-page-close"
               onClick={() => {
-                onClosePage();
+                onChangePage(false);
               }}
             ></i>
           </h5>

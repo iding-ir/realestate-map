@@ -9,12 +9,14 @@
 
 /* ------------- Popup ------------- */
 
-.mapboxgl-popup-content .sc-card .sc-card-header {
+.mapboxgl-popup-content .sc-card-header {
   padding: var(--padding-sm) 0 !important;
 }
 
-.mapboxgl-popup-content .sc-card .sc-card-header > * {
+.mapboxgl-popup-content .sc-card-header h5 {
+  text-decoration: underline;
   margin: 0 !important;
+  cursor: pointer;
 }
 
 .mapboxgl-popup-content .sc-card-body {

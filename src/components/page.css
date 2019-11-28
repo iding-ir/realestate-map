@@ -59,6 +59,7 @@
 
 .app-page-close {
   float: right;
+  cursor: pointer;
 }
 
 .app-page .app-page-body {
