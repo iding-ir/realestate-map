@@ -55,6 +55,7 @@ export default class Mapcraft {
             text: "#E1F5FE"
           }
         },
+        useBuiltIn: true,
         styles: {
           light: "./mapcraft/jsons/styles/light/style.json",
           dark: "./mapcraft/jsons/styles/dark/style.json"
@@ -164,13 +165,14 @@ export default class Mapcraft {
       navigation
     });
 
-    this.map.on("style.load", () => {
-      const colors = this.options.defaultMapColors[this.options.defaultStyle];
+    if (this.options.useBuiltIn)
+      this.map.on("style.load", () => {
+        const colors = this.options.defaultMapColors[this.options.defaultStyle];
 
-      this.colorizeDefaultMap({
-        colors
+        this.colorizeDefaultMap({
+          colors
+        });
       });
-    });
 
     return this;
   }

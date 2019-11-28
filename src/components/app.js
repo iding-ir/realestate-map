@@ -3,16 +3,15 @@ import $ from "jquery";
 import Mapcraft from "../mapcraft";
 import Search from "./search";
 import Tour from "./tour";
+import Page from "./page";
 
 class App extends Component {
   state = {
     types: [
       { slug: "house", name: "House", checked: true },
       { slug: "apartment", name: "Apartment", checked: true },
-      { slug: "communal", name: "Communal", checked: true },
-      { slug: "dorm", name: "Dorm", checked: true },
-      { slug: "commercial", name: "Commercial", checked: true },
-      { slug: "warehouse", name: "Warehouse", checked: true }
+      { slug: "shared", name: "Shared", checked: true },
+      { slug: "dorm", name: "Dorm", checked: true }
     ],
     rooms: [
       { slug: "one", name: "One", checked: false },
@@ -37,7 +36,9 @@ class App extends Component {
       features: []
     },
     tourActive: false,
-    tourIndex: 0
+    tourIndex: 0,
+    pageVisible: false,
+    page: {}
   };
 
   componentDidMount() {
@@ -70,7 +71,7 @@ class App extends Component {
           />
         </div>
 
-        <div className={this.getTourAdditionalClasses()}>
+        <div className={this.getTourControlsClasses()}>
           <Tour
             disableRestart={this.state.tourIndex <= 0}
             disableNext={this.state.tourIndex >= lastIndex}
@@ -78,14 +79,37 @@ class App extends Component {
             onChangeTour={this.handleChangeTour}
           />
         </div>
+
+        <div
+          className={this.getPageOverlayClasses()}
+          onClick={() => {
+            this.handleClosePage();
+          }}
+        >
+          <Page page={this.state.page} onClosePage={this.handleClosePage} />
+        </div>
       </div>
     );
   }
 
-  getTourAdditionalClasses = () => {
+  handleClosePage = () => {
+    let pageVisible = false;
+
+    this.setState({ pageVisible });
+  };
+
+  getTourControlsClasses = () => {
     let classes = "app-tour-controls sc-grid-4";
 
     if (this.state.tourActive) classes += " is-visible";
+
+    return classes;
+  };
+
+  getPageOverlayClasses = () => {
+    let classes = "app-page-overlay";
+
+    if (this.state.pageVisible) classes += " is-visible";
 
     return classes;
   };
@@ -296,7 +320,7 @@ class App extends Component {
 
       this.mapcraft.flyTo({
         lnglat: lnglat,
-        zoom: 12
+        zoom: 15
       });
 
       this.openPopup(feature.properties, lnglat);
@@ -307,10 +331,20 @@ class App extends Component {
 
   InitializeMap = () => {
     this.mapcraft = new Mapcraft({
+      env: {
+        mapbox: {
+          token:
+            "pk.eyJ1IjoiYXlkaW5naGFuZSIsImEiOiJjazJpcXB1Zm8xamNvM21sNjlsMG95ejY3In0.jMuteEFuzviEuitJZ-DY2w"
+        }
+      },
+      // useBuiltIn: false,
+      // styles: {
+      //   light: "mapbox://styles/mapbox/streets-v11"
+      // },
       map: {
         container: "app-map",
-        center: [0, 0],
-        zoom: 3,
+        center: [5, 60],
+        zoom: 5,
         pitch: 50,
         bearing: 0,
         hash: false
@@ -318,10 +352,8 @@ class App extends Component {
       icons: {
         house: "./assets/images/icon-house.png",
         apartment: "./assets/images/icon-apartment.png",
-        communal: "./assets/images/icon-communal.png",
-        dorm: "./assets/images/icon-dorm.png",
-        commercial: "./assets/images/icon-commercial.png",
-        warehouse: "./assets/images/icon-warehouse.png"
+        shared: "./assets/images/icon-shared.png",
+        dorm: "./assets/images/icon-dorm.png"
       },
       geoJsons: {
         places: "./data/places.json"
@@ -353,11 +385,18 @@ class App extends Component {
   };
 
   openPopup = (properties, lnglat) => {
+    if (typeof properties.images !== "object")
+      properties.images = JSON.parse(properties.images);
+
+    properties.typeName = this.state.types.filter(
+      t => t.slug === properties.type
+    )[0].name;
+
     let {
       title,
-      image,
-      description,
-      type,
+      images,
+      excert,
+      typeName,
       rooms,
       area,
       rent,
@@ -367,44 +406,55 @@ class App extends Component {
     let html = `<div class="sc-card sc-borderless">
       <div class="sc-card-header"><h5>${title}</h5></div>
         <div class="sc-card-body">
-          <table class="sc-table">
-            <img src="${image}" />
+          <div>
+            <img src="${images[0].thumbnail}" class="app-page-trigger" />
+          </div>
 
-            <p>${description}</p>
+          <div>
+            <table class="sc-table">
+              <tbody>
+                <tr>
+                  <td>Type</td>
+                  <td>${typeName}</td>
+                </tr>
 
-            <tbody>
-              <tr>
-                <td>Type</td>
-                <td>${type}</td>
-              </tr>
+                <tr>
+                  <td>Rooms</td>
+                  <td>${rooms}</td>
+                </tr>
 
-              <tr>
-                <td>Rooms</td>
-                <td>${rooms}</td>
-              </tr>
+                <tr>
+                  <td>Area</td>
+                  <td>${area}</td>
+                </tr>
 
-              <tr>
-                <td>Area</td>
-                <td>${area}</td>
-              </tr>
+                <tr>
+                  <td>Rent</td>
+                  <td>${rent}</td>
+                </tr>
 
-              <tr>
-                <td>Rent</td>
-                <td>${rent}</td>
-              </tr>
+                <tr>
+                  <td>Deposit</td>
+                  <td>${deposit}</td>
+                </tr>
+              </tbody>
+            </table>
 
-              <tr>
-                <td>Deposit</td>
-                <td>${deposit}</td>
-              </tr>
-            </tbody>
-          </table>
+            <p>${excert}</p>
+          </div>
         </div>
       </div>`;
 
     this.mapcraft.openPopup({
       lnglat: lnglat,
       html: html
+    });
+
+    $(".app-page-trigger").on("click", () => {
+      let pageVisible = true;
+      let page = properties;
+
+      this.setState({ pageVisible, page });
     });
   };
 }

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import $ from "jquery";
 import InputRange from "react-input-range";
-import "../input-range.css";
 
 class Sreach extends Component {
   state = {};

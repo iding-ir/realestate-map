@@ -342,6 +342,22 @@ h6 {
   mask-image: var(--icon-compass);
 }
 
+.sc-icon-prev::before {
+  mask-image: var(--icon-prev);
+}
+
+.sc-icon-next::before {
+  mask-image: var(--icon-next);
+}
+
+.sc-icon-stop::before {
+  mask-image: var(--icon-stop);
+}
+
+.sc-icon-play::before {
+  mask-image: var(--icon-play);
+}
+
 /* ------------- Form ------------- */
 
 .sc-form {
@@ -864,6 +880,15 @@ h6 {
 .sc-card .sc-card-header {
   padding: var(--padding-md) 0;
   border-bottom: var(--border-thickness) solid var(--fade-dark-md);
+}
+
+.sc-card .sc-card-header h1,
+.sc-card .sc-card-header h2,
+.sc-card .sc-card-header h3,
+.sc-card .sc-card-header h4,
+.sc-card .sc-card-header h5,
+.sc-card .sc-card-header h6 {
+  line-height: var(--icon-lg);
 }
 
 .sc-card .sc-card-body {
