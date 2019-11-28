@@ -103,32 +103,33 @@ export default class Mapcraft {
 
   load() {
     return new Promise((resolve, reject) => {
-      this.buildMap()
-        .loadIcons({
+      this.buildMap().then(() => {
+        this.loadIcons({
           icons: this.options.icons
         })
-        .then(() => {
-          this.fetchGeoJson({
-            geoJsons: this.options.geoJsons
-          })
-            .then(geoJsons => {
-              this.renderGeoJson({
-                geoJsons: geoJsons
-              })
-                .then(() => {
-                  resolve();
-                })
-                .catch(error => {
-                  reject(error);
-                });
+          .then(() => {
+            this.fetchGeoJson({
+              geoJsons: this.options.geoJsons
             })
-            .catch(error => {
-              reject(error);
-            });
-        })
-        .catch(error => {
-          reject(error);
-        });
+              .then(geoJsons => {
+                this.renderGeoJson({
+                  geoJsons: geoJsons
+                })
+                  .then(() => {
+                    resolve();
+                  })
+                  .catch(error => {
+                    reject(error);
+                  });
+              })
+              .catch(error => {
+                reject(error);
+              });
+          })
+          .catch(error => {
+            reject(error);
+          });
+      });
     });
   }
 
@@ -141,40 +142,53 @@ export default class Mapcraft {
   }
 
   buildMap() {
-    mapboxgl.accessToken = this.options.env.mapbox.token;
+    return new Promise((resolve, reject) => {
+      mapboxgl.accessToken = this.options.env.mapbox.token;
 
-    const { container, center, zoom, pitch, bearing, hash } = this.options.map;
+      const {
+        container,
+        center,
+        zoom,
+        pitch,
+        bearing,
+        hash
+      } = this.options.map;
 
-    this.map = new mapboxgl.Map({
-      container,
-      center,
-      zoom,
-      pitch,
-      bearing,
-      minZoom: 2,
-      maxZoom: 20,
-      hash,
-      style: this.options.styles[this.options.defaultStyle]
-    });
-
-    const { fullscreen, geolocation, navigation } = this.options.controls;
-
-    this.addControls({
-      fullscreen,
-      geolocation,
-      navigation
-    });
-
-    if (this.options.useBuiltIn)
-      this.map.on("style.load", () => {
-        const colors = this.options.defaultMapColors[this.options.defaultStyle];
-
-        this.colorizeDefaultMap({
-          colors
-        });
+      this.map = new mapboxgl.Map({
+        container,
+        center,
+        zoom,
+        pitch,
+        bearing,
+        minZoom: 2,
+        maxZoom: 20,
+        hash,
+        style: this.options.styles[this.options.defaultStyle]
       });
 
-    return this;
+      const { fullscreen, geolocation, navigation } = this.options.controls;
+
+      this.addControls({
+        fullscreen,
+        geolocation,
+        navigation
+      });
+
+      if (this.options.useBuiltIn)
+        this.map.on("style.load", () => {
+          const colors = this.options.defaultMapColors[
+            this.options.defaultStyle
+          ];
+
+          this.colorizeDefaultMap({
+            colors
+          });
+        });
+
+      this.map.on("load", () => {
+        resolve();
+      });
+    });
   }
 
   loadIcons(opt) {

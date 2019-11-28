@@ -352,10 +352,10 @@ class App extends Component {
             "pk.eyJ1IjoiYXlkaW5naGFuZSIsImEiOiJjazJpcXB1Zm8xamNvM21sNjlsMG95ejY3In0.jMuteEFuzviEuitJZ-DY2w"
         }
       },
-      // useBuiltIn: false,
-      // styles: {
-      //   light: "mapbox://styles/mapbox/streets-v11"
-      // },
+      useBuiltIn: false,
+      styles: {
+        light: "mapbox://styles/mapbox/streets-v11"
+      },
       map: {
         container: "app-map",
         center: [5, 60],
@@ -380,11 +380,11 @@ class App extends Component {
 
       setTimeout(() => {
         this.handleGeoJson();
-      }, 2500);
+      }, 2000);
 
       setTimeout(() => {
         this.handleChangeSlide(true);
-      }, 4000);
+      }, 5000);
 
       this.mapcraft.map.on("click", "point-symbol-places", event => {
         let properties = event.features[0].properties;
@@ -419,46 +419,49 @@ class App extends Component {
     } = properties;
 
     let html = `<div class="sc-card sc-borderless">
-      <div class="sc-card-header"><h5 class="app-page-trigger">${title}</h5></div>
-        <div class="sc-card-body">
-          <div>
-            <img src="${images[0].thumbnail}" class="app-page-trigger" />
-          </div>
+      <div class="sc-card-header">
+        <h5 class="app-page-trigger">${title}</h5>
+      </div>
 
-          <div>
-            <table class="sc-table">
-              <tbody>
-                <tr>
-                  <td>Type</td>
-                  <td>${typeName}</td>
-                </tr>
-
-                <tr>
-                  <td>Rooms</td>
-                  <td>${rooms}</td>
-                </tr>
-
-                <tr>
-                  <td>Area</td>
-                  <td>${area}</td>
-                </tr>
-
-                <tr>
-                  <td>Rent</td>
-                  <td>${rent}</td>
-                </tr>
-
-                <tr>
-                  <td>Deposit</td>
-                  <td>${deposit}</td>
-                </tr>
-              </tbody>
-            </table>
-
-            <p>${excert}</p>
-          </div>
+      <div class="sc-card-body">
+        <div>
+          <img src="${images[0].thumbnail}" class="app-page-trigger" />
         </div>
-      </div>`;
+
+        <div>
+          <table class="sc-table">
+            <tbody>
+              <tr>
+                <td>Type</td>
+                <td>${typeName}</td>
+              </tr>
+
+              <tr>
+                <td>Rooms</td>
+                <td>${rooms}</td>
+              </tr>
+
+              <tr>
+                <td>Area</td>
+                <td>${area}</td>
+              </tr>
+
+              <tr>
+                <td>Rent</td>
+                <td>${rent}</td>
+              </tr>
+
+              <tr>
+                <td>Deposit</td>
+                <td>${deposit}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="sc-card-footer">${excert}</div>
+    </div>`;
 
     this.mapcraft.openPopup({
       lnglat: lnglat,

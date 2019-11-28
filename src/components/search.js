@@ -97,7 +97,7 @@ class Sreach extends Component {
               <InputRange
                 maxValue={200}
                 minValue={20}
-                step={10}
+                step={5}
                 value={{ min: areas.from, max: areas.to }}
                 onChange={value => {
                   onChangeArea(value);
