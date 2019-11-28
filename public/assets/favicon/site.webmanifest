@@ -1,5 +1,5 @@
 {
-  "name": "React map filter",
+  "name": "Realstate map",
   "short_name": "React map",
   "icons": [{
       "src": "favicon.ico",
@@ -19,6 +19,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#1e88e5",
-  "background_color": "#1e88e5"
+  "theme_color": "#00a8ff",
+  "background_color": "#00a8ff"
 }
