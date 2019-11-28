@@ -1,8 +1,8 @@
 .app-tour-controls {
   position: absolute;
   bottom: var(--padding-md);
-  left: 50%;
-  transform: translateX(-50%);
+  left: var(--padding-md);
+  right: var(--padding-md);
   padding: var(--padding-sm);
   background-color: var(--color-light);
   border: var(--border-thickness) solid var(--color-primary-light);
@@ -12,6 +12,15 @@
   opacity: 0;
   visibility: hidden;
   z-index: 1000;
+}
+
+@media only screen and (min-width: 600px) {
+  .app-tour-controls {
+    width: 36rem;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
 }
 
 .app-tour-controls.is-visible {

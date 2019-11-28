@@ -364,6 +364,11 @@ class App extends Component {
         bearing: 0,
         hash: false
       },
+      controls: {
+        fullscreen: false,
+        geolocation: false,
+        navigation: true
+      },
       icons: {
         house: "./assets/images/icon-house.png",
         apartment: "./assets/images/icon-apartment.png",
