@@ -15,3 +15,5 @@ This project uses WebGL to render vector tiles which uses graphic processor to p
 It uses standard GeoJSON data structure and filters data at the client side. This way, app does not need to send a server request every time there is a change in the filter.
 
 Using React, map immediately reacts to filter changes and re-renders the results.
+
+<img src="http://realstate-map.iding.ir/preview.gif" alt="Preview" />
