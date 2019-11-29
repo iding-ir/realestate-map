@@ -18,4 +18,4 @@ Geolocation data in this app follow the standard [GeoJSON](https://geojson.org/)
 
 - Using React, map immediately reacts to filter changes and re-renders the results.
 
-<img src="https://github.com/iding-ir/realstate-map/blob/master/raw/previews/preview-01.gif" alt="Preview" style="width:100%;">
+<img src="https://github.com/iding-ir/realstate-map/blob/master/raw/previews/preview-1.gif" alt="Preview" style="width:100%;">
