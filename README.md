@@ -16,4 +16,5 @@ It uses standard GeoJSON data structure and filters data at the client side. Thi
 
 Using React, map immediately reacts to filter changes and re-renders the results.
 
-<img src="http://realstate-map.iding.ir/preview.gif" alt="Preview" />
+<img src="https://github.com/iding-ir/test/blob/master/raw/preview/preview-01
+.gif" alt="Preview" style="width:100%;">
