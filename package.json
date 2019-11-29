@@ -1,7 +1,18 @@
 {
   "name": "realsate-map",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "homepage": "http://realsate-map.iding.ir",
+  "keywords": [
+    "react", "map"
+  ],
+  "description": "",
+  "author": {
+    "name": "Aydin Ghane Kh.",
+    "email": "aydin.ghane.kh@gmail.com",
+    "url": "http://iding.ir"
+  },
   "private": true,
+  "license": "UNLICENSED",
   "dependencies": {
     "mapbox-gl": "^1.5.0",
     "react": "^16.10.2",
