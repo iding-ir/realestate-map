@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./app.css";
-import Mapcraft from "../mapcraft";
+import Mapcraft from "mapcraft";
 import Search from "./search";
 import Tour from "./tour";
 import Page from "./page";
@@ -352,7 +352,6 @@ class App extends Component {
             "pk.eyJ1IjoiYXlkaW5naGFuZSIsImEiOiJjazJpcXB1Zm8xamNvM21sNjlsMG95ejY3In0.jMuteEFuzviEuitJZ-DY2w"
         }
       },
-      useBuiltIn: false,
       styles: {
         light: "mapbox://styles/mapbox/streets-v11"
       },
