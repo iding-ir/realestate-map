@@ -18,4 +18,6 @@ Data structure in this project follows [GeoJSON](https://geojson.org/) standard.
 
 - Using React, map immediately reacts to filter changes and re-renders the results.
 
+## Preview
+
 <img src="https://github.com/iding-ir/realestate-map/blob/master/raw/previews/preview-1.gif" alt="Preview" style="width:100%;">
