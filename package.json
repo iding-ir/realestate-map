@@ -1,6 +1,6 @@
 {
   "name": "realestate-map",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Real estate map filter with React.",
   "scripts": {
     "start": "react-scripts start",
