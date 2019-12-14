@@ -13,7 +13,12 @@
     "url": "git+https://github.com/iding-ir/realestate-map.git"
   },
   "keywords": [
-    "map", "React", "GeoJSON", "Mapbox GL JS", "Mapcraft", "Stylecraft"
+    "map",
+    "React",
+    "GeoJSON",
+    "Mapbox GL JS",
+    "Mapcraft",
+    "Stylecraft"
   ],
   "author": {
     "name": "Aydin Ghane Kh.",
@@ -24,7 +29,6 @@
   "bugs": {
     "url": "https://github.com/iding-ir/realestate-map/issues"
   },
-  "homepage": "https://github.com/iding-ir/realestate-map#readme",
   "dependencies": {
     "mapbox-gl": "^1.5.0",
     "mapcraft": "^0.1.0",
