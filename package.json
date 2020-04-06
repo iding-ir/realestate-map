@@ -31,13 +31,13 @@
   },
   "dependencies": {
     "mapbox-gl": "^1.5.0",
-    "mapcraft": "^0.1.0",
+    "mapcraft": "^0.1.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-image-gallery": "^0.9.1",
     "react-input-range": "^1.3.0",
-    "react-scripts": "3.2.0",
-    "stylecraft": "^0.1.0",
+    "react-scripts": "^3.4.1",
+    "stylecraft": "^0.1.1",
     "terraformer": "^1.0.9"
   },
   "eslintConfig": {
